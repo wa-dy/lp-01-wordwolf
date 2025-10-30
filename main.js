@@ -35,7 +35,7 @@
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -20%',
+    rootMargin: '0px 0px -15%',
     threshold: 0,
   });
 
