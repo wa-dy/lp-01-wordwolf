@@ -2,6 +2,11 @@
 /* ===========================================
 //  Animations
 // ======================================== */
+:root {
+  --fadein-x: 0px;
+  --fadein-y: 20px;
+}
+
 /* 回転のキーフレーム */
 @-webkit-keyframes spin {
   from {
@@ -35,6 +40,47 @@
     transform: scale(0.8);
   }
 }
+[data-fx=blur] {
+  opacity: 0;
+  filter: blur(1rem);
+}
+[data-fx=blur].is-active {
+  opacity: 1;
+  filter: blur(0);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-fx=fadein] {
+  opacity: 0;
+  transform: translate(var(--fadein-x), var(--fadein-y));
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-fx=fadein].is-active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.fadein-letter {
+  opacity: 0;
+  transform: translate(var(--fadein-x), var(--fadein-y));
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-fx=fadein-text].is-active .fadein-letter {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+[data-fx=rotate] {
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-fx=rotate].is-active {
+  opacity: 1;
+  transform: rotate(var(--rotate-angle));
+}
+
 /* ===========================================
 //  COMMON
 // ======================================== */
@@ -58,6 +104,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {
@@ -92,9 +139,12 @@ ul {
   position: absolute;
   bottom: 0;
   left: -16px;
-  width: calc(100% + 32px);
+  width: 0;
   border-bottom: 4px solid #BFCFDD;
-  transition: width 0.5s;
+  transition: width 1.4s;
+}
+.section-title.is-active::after {
+  width: calc(100% + 32px);
 }
 .section-title--title {
   font-family: "Yusei Magic", sans-serif;
@@ -114,9 +164,12 @@ ul {
   position: absolute;
   bottom: 0;
   left: -16px;
-  width: calc(100% + 32px);
+  width: 0;
   border-bottom: 2px solid #BFCFDD;
-  transition: width 0.5s;
+  transition: width 1.4s;
+}
+.section-sub-title.is-active::after {
+  width: calc(100% + 32px);
 }
 .section-sub-title--tamed {
   color: #3498DB;
@@ -128,7 +181,7 @@ ul {
   cursor: pointer;
 }
 .is-wild .section-sub-title--tamed::after {
-  border: none;
+  width: 0;
 }
 
 .section-sub-title--tamed::after {
@@ -145,7 +198,7 @@ ul {
   cursor: pointer;
 }
 .is-tamed .section-sub-title--wild::after {
-  border: none;
+  width: 0;
 }
 
 .section-sub-title--wild::after {
@@ -189,16 +242,16 @@ ul {
 // ======================================== */
 .cta-fixed {
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   top: 16px;
   right: 16px;
   height: 96px;
   aspect-ratio: 1/1;
   filter: drop-shadow(2px 2px 0 rgba(44, 62, 80, 0.25));
-  transition: transform 1s, opacity 1s;
+  transition: transform 0.6s, opacity 0.6s;
 }
 .is-scroll .cta-fixed {
-  transform: scale(0.7);
+  transform: scale(0.8);
   opacity: 0.9;
 }
 
@@ -251,16 +304,16 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 .cta__text {
   text-shadow: 2px 2px 0 rgba(52, 152, 219, 0.25);
 }
 .cta__button {
   background: #3498DB;
-  padding: 8px 64px;
+  padding: 12px 80px;
   border-radius: 8px;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #FFFFFF;
   text-shadow: 2px 2px 0 rgba(44, 62, 80, 0.25);
   box-shadow: 2px 2px 0 rgba(44, 62, 80, 0.25);
@@ -367,15 +420,6 @@ ul {
   align-items: center;
   box-shadow: 2px 2px 0 rgba(44, 62, 80, 0.25);
 }
-.scenes__item--1 {
-  transform: rotate(-5deg);
-}
-.scenes__item--2 {
-  transform: rotate(10deg);
-}
-.scenes__item--3 {
-  transform: rotate(-15deg);
-}
 .scenes__item-title {
   font-size: 1.6rem;
   text-align: center;
@@ -428,7 +472,19 @@ ul {
   align-items: center;
   gap: 16px;
   padding: 8px 0 8px 24px;
+  position: relative;
+}
+.features__item-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
   border-left: 2px solid #BFCFDD;
+  transition: height 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.features__item-content.is-active::before {
+  height: 100%;
 }
 .features__item-icon {
   width: 64px;
@@ -498,10 +554,17 @@ ul {
   gap: 16px;
 }
 .flow__item-sub-content {
-  border: 4px solid #3498DB;
   border-radius: 16px;
   overflow: hidden;
 }
+.flow__list--tamed .flow__item-sub-content {
+  border: 4px solid #3498DB;
+}
+
+.flow__list--wild .flow__item-sub-content {
+  border: 4px solid #E74C3C;
+}
+
 .flow__item-text {
   display: flex;
   flex-direction: column;

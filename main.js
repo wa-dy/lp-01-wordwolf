@@ -1,12 +1,14 @@
 'use strict';
 
 {
+
+  const page = document.getElementById('page');
+
   // ===========================================
   //  スクロールしたら追従ボタンが縮小
   // ===========================================
 
   const screenTop = document.getElementById('screen-top');
-  const page = document.getElementById('page');
 
   const scrollObserver = new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting) {
@@ -17,6 +19,47 @@
   });
 
   scrollObserver.observe(screenTop);
+
+  // ===========================================
+  //  アニメーション対象を一括監視
+  // ===========================================
+
+  const effectTargets = document.querySelectorAll('[data-fx]');
+
+  const effectObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -20%',
+    threshold: 0,
+  });
+
+  effectTargets.forEach(el => effectObserver.observe(el));
+
+    // ===========================================
+  //  フェードイン用のテキスト分割処理
+  // ===========================================
+
+  const splitTextTargets = document.querySelectorAll('[data-fx="fadein-text"]');
+
+  splitTextTargets.forEach(target => {
+    const text = target.textContent.trim();
+    const letters = text.split('');
+    target.innerHTML = '';
+    letters.forEach((letter, index) => {
+      const span = document.createElement('span');
+      span.textContent = letter;
+      span.classList.add('fadein-letter');
+      span.style.display = 'inline-block';
+      span.style.setProperty('--index', index);
+      target.appendChild(span);
+    })
+  });
 
   // ===========================================
   //  ゲームモード切り替え

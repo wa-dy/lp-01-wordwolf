@@ -31,44 +31,50 @@
   <section id="hero" class="hero">
     <div class="hero__mainvisual">
       <div class="hero__catchcopy">
-        <h1 class="hero__title">みんなのワードウルフ</h1>
-        <p>話して笑って、裏切られる！会話型推理ゲーム</p>
-        <p>スマホ１台、登録不要ですぐ盛り上がる！</p>
+        <h1 class="hero__title" data-fx="blur">みんなのワードウルフ</h1>
+        <p data-fx="fadein-text">話して笑って、裏切られる！会話型推理ゲーム</p>
+        <p data-fx="fadein-text">完全無料！登録不要！スマホ１台ですぐ盛り上がる！</p>
       </div>
-      <img class="hero__illust-moon float-image float-image--red" src="images/illust-moon.png" alt="月のイラスト">
-      <img class="hero__illust-cloud float-image float-image--blue" src="images/illust-cloud.png" alt="雲のイラスト">
-      <img class="hero__illust-tree float-image float-image--blue" src="images/illust-tree.png" alt="木のイラスト">
-      <img class="hero__illust-fire float-image float-image--red" src="images/illust-fire.png" alt="焚き火のイラスト">
-      <img class="hero__illust-app float-image" src="images/illust-app.png" alt="アプリ画面のイラスト">
+      <img class="hero__illust-moon float-image float-image--red" src="images/illust-moon.png" alt="月のイラスト" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
+      <img class="hero__illust-cloud float-image float-image--blue" src="images/illust-cloud.png" alt="雲のイラスト" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
+      <img class="hero__illust-tree float-image float-image--blue" src="images/illust-tree.png" alt="木のイラスト" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
+      <img class="hero__illust-fire float-image float-image--red" src="images/illust-fire.png" alt="焚き火のイラスト" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
+      <img class="hero__illust-app float-image" src="images/illust-app.png" alt="アプリ画面のイラスト" data-fx="fadein" style="--fadein-x: 0px; --fadein-y: 24px;">
     </div>
   </section>
 
   <!-- Scenes Section -->
   <section id="scenes" class="scenes">
     <div class="scenes__content">
-      <h2 class="section-title">こんな時ありませんか？</h2>
+      <h2 class="section-title" data-fx="fadein-text">こんな時ありませんか？</h2>
       <ul class="scenes__list">
-        <li class="scenes__item scenes__item--1">
+        <li class="scenes__item" data-fx="rotate" style="--rotate-angle: -6deg;">
           <img src="images/illust-excited.png" alt="はしゃいでいる画像">
           <h3 class="scenes__item-title">仲間と盛り上がりたい時！</h3>
         </li>
-        <li class="scenes__item scenes__item--2">
+        <li class="scenes__item" data-fx="rotate" style="--rotate-angle: 12deg;">
           <img src="images/illust-playing.png" alt="遊びを模索している画像">
           <h3 class="scenes__item-title">いまの遊びから、<br>ちょっと気分を変えたい時！</h3>
         </li>
-        <li class="scenes__item scenes__item--3">
+        <li class="scenes__item" data-fx="rotate" style="--rotate-angle: -18deg;">
           <img src="images/illust-bored.png" alt="退屈している画像">
           <h3 class="scenes__item-title">ちょっとした空き時間を<br>楽しく埋めたい時！</h3>
         </li>
       </ul>
-      <p class="promo-text">そんな時は<br><span class="promo-text--title">みんなのワードウルフ</span>！</p>
-      <p class="promo-text">スマホ１台、登録不要で<br>誰でもすぐに遊べます！</p>
+      <div>
+        <p class="promo-text" data-fx="fadein-text">そんな時は</p>
+        <p class="promo-text--title" data-fx="blur">みんなのワードウルフ！</p>
+      </div>
+      <div>
+        <p class="promo-text" data-fx="fadein-text">スマホ１台、登録不要で</p>
+        <p class="promo-text" data-fx="fadein-text">誰でもすぐに遊べます！</p>
+      </div>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section class="cta">
-    <div class="cta__content">
+    <div class="cta__content" data-fx="blur">
       <p class="cta__text promo-text">お題を見て、話して、見破れ<span class="promo-text--back">騙せ</span></p>
       <a class="cta__button" href="https://wa-dy.github.io/app-01-wordwolf/" target="_blank">みんなで遊ぶ</a>
     </div>
@@ -77,77 +83,83 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="about__content">
-      <h2 class="section-title">そもそもワードウルフって？</h2>
+      <h2 class="section-title" data-fx="fadein-text">そもそもワードウルフって？</h2>
       <div class="about__text">
-        <p>ワードウルフは、みんなで話して盛り上がりながら遊ぶ会話型の推理ゲームです。</p>
-        <p>参加者の中でひとりだけ、少しだけ違うお題を与えられた人（ウルフ）がいます。</p>
-        <p>全員で自由にトークをしながら、「誰がウルフなのか？」を探り合います。</p>
-        <p>ウルフは正体を隠しきれば勝ち、他のみんなは見抜ければ勝ち！</p>
-        <p>スマホ1台で手軽に楽しめる、盛り上がり必至のパーティーゲームです。</p>
+        <p data-fx="fadein-text">ワードウルフは、みんなで話して盛り上がりながら遊ぶ会話型の推理ゲームです。</p>
+        <p data-fx="fadein-text">参加者の中でひとりだけ、少しだけ違うお題を与えられた人（ウルフ）がいます。</p>
+        <p data-fx="fadein-text">全員で自由にトークをしながら、「誰がウルフなのか？」を探り合います。</p>
+        <p data-fx="fadein-text">ウルフは正体を隠しきれば勝ち、他のみんなは見抜ければ勝ち！</p>
+        <p data-fx="fadein-text">スマホ1台で手軽に楽しめる、盛り上がり必至のパーティーゲームです。</p>
       </div>
-      <p class="promo-text">そんなワードウルフを<br>このアプリならスマホ１台で<br>簡単に楽しめる！</p>
+      <div>
+        <p class="promo-text" data-fx="fadein-text">そんなワードウルフを</p>
+        <p class="promo-text" data-fx="fadein-text">このアプリならスマホ１台で</p>
+        <p class="promo-text" data-fx="fadein-text">簡単に楽しめる！</p>
+      </div>
     </div>
   </section>
 
   <!-- Features Section -->
   <section id="features" class="features">
     <div class="features__content">
-      <h2 class="section-title"><span class="section-title--title">みんなのワードウルフ</span>の特徴</h2>
+      <h2 class="section-title" data-fx>
+        <span class="section-title--title" data-fx="blur">みんなのワードウルフ</span><span data-fx="fadein-text">の特徴</span>
+      </h2>
       <ul class="features__list">
         <li class="features__item">
-          <h3 class="item-title">完全無料で楽しめる！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-free.svg" alt="無料のアイコン">
-            <p>登録も課金も一切なし。誰でも気軽にワードウルフを始められます！</p>
+          <h3 class="item-title" data-fx="fadein-text">完全無料で楽しめる！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-free.svg" alt="無料のアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
+            <p data-fx="fadein-text">登録も課金も一切なし。誰でも気軽にワードウルフを始められます！</p>
           </div>
         </li>
         <li class="features__item">
-          <h3 class="item-title">インストール不要ですぐ遊べる！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-network.svg" alt="ネットワークのアイコン">
-            <p>ブラウザを開くだけでOK。アプリを入れる手間なく、思い立った瞬間にプレイ可能！</p>
+          <h3 class="item-title" data-fx="fadein-text">インストール不要ですぐ遊べる！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-network.svg" alt="ネットワークのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
+            <p data-fx="fadein-text">ブラウザを開くだけでOK。アプリを入れる手間なく、思い立った瞬間にプレイ可能！</p>
           </div>
         </li>
         <li class="features__item">
-          <h3 class="item-title">選べる2つの遊び方！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-controller.svg" alt="コントローラーのアイコン">
-            <p>自動お題モードでサクッと遊ぶもよし、手動お題モードでオリジナルお題を楽しむもよし！自由にモードを選べます。</p>
+          <h3 class="item-title" data-fx="fadein-text">選べる2つの遊び方！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-controller.svg" alt="コントローラーのアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
+            <p data-fx="fadein-text">自動お題モードでサクッと遊ぶもよし、手動お題モードでオリジナルお題を楽しむもよし！自由にモードを選べます。</p>
           </div>
         </li>
         <li class="features__item">
-          <h3 class="item-title">討論終了はタイマー音でお知らせ！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-stopwatch.svg" alt="ストップウォッチのアイコン">
-            <p>話し合いの時間をアラームで通知。ゲーム進行もスムーズで、時間管理の心配なし！</p>
+          <h3 class="item-title" data-fx="fadein-text">討論終了はタイマー音でお知らせ！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-stopwatch.svg" alt="ストップウォッチのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
+            <p data-fx="fadein-text">話し合いの時間をアラームで通知。ゲーム進行もスムーズで、時間管理の心配なし！</p>
           </div>
         </li>
         <li class="features__item">
-          <h3 class="item-title">投票も結果もスマホ1台で完結！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-vote.svg" alt="投票のアイコン">
-            <p>全員での投票がアプリ上で簡単に完了。結果もすぐに表示されるので、手間なく盛り上がれます。</p>
+          <h3 class="item-title" data-fx="fadein-text">投票も結果もスマホ1台で完結！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-vote.svg" alt="投票のアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
+            <p data-fx="fadein-text">全員での投票がアプリ上で簡単に完了。結果もすぐに表示されるので、手間なく盛り上がれます。</p>
           </div>
         </li>
         <li class="features__item">
-          <h3 class="item-title">勝敗は自動スコア集計！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-scorenote.svg" alt="スコアノートのアイコン">
-            <p>誰が一番活躍したかもひと目で分かる！勝敗やスコアの管理もアプリが自動で行います。</p>
+          <h3 class="item-title" data-fx="fadein-text">勝敗は自動スコア集計！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-scorenote.svg" alt="スコアノートのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
+            <p data-fx="fadein-text">誰が一番活躍したかもひと目で分かる！勝敗やスコアの管理もアプリが自動で行います。</p>
           </div>
         </li>
         <li class="features__item">
-          <h3 class="item-title">バレてもまだチャンスあり！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-wolf.svg" alt="オオカミのアイコン">
-            <p>ウルフが見破られても、相手のお題を当てられれば逆転勝利！最後の一瞬までハラハラが止まらない！</p>
+          <h3 class="item-title" data-fx="fadein-text">バレてもまだチャンスあり！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-wolf.svg" alt="オオカミのアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
+            <p data-fx="fadein-text">ウルフが見破られても、相手のお題を当てられれば逆転勝利！最後の一瞬までハラハラが止まらない！</p>
           </div>
         </li>
         <li class="features__item">
-          <h3 class="item-title">途中で中断しても続きから再開！</h3>
-          <div class="features__item-content">
-            <img class="features__item-icon" src="images/icon-reload.svg" alt="リロードのアイコン">
-            <p>ブラウザを閉じてもデータは保持されるので、途中で中断しても続きから再開可能。忙しいときでも安心です。</p>
+          <h3 class="item-title" data-fx="fadein-text">途中で中断しても続きから再開！</h3>
+          <div class="features__item-content" data-fx>
+            <img class="features__item-icon" src="images/icon-reload.svg" alt="リロードのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
+            <p data-fx="fadein-text">ブラウザを閉じてもデータは保持されるので、途中で中断しても続きから再開可能。忙しいときでも安心です。</p>
           </div>
         </li>
       </ul>
@@ -155,7 +167,7 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="cta">
+  <section class="cta" data-fx="blur">
     <div class="cta__content">
       <p class="cta__text promo-text">お題を見て、話して、見破れ<span class="promo-text--back">騙せ</span></p>
       <a class="cta__button" href="https://wa-dy.github.io/app-01-wordwolf/" target="_blank">みんなで遊ぶ</a>
@@ -165,9 +177,9 @@
   <!-- Flow Section -->
   <section id="flow" class="flow is-tamed">
     <div class="flow__content">
-      <h2 class="section-title">ゲームの流れ</h2>
+      <h2 class="section-title" data-fx="fadein-text">ゲームの流れ</h2>
       <ul class="flow__list">
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">00</span></div>
@@ -177,7 +189,7 @@
             <img src="images/image-top.png" alt="トップ画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">01</span></div>
@@ -217,12 +229,12 @@
     </div>
     <div class="flow__content flow__content--mode">
       <div class="flow__mode-title-container">
-        <h3 id="flow-sub-title-tamed" class="section-sub-title section-sub-title--tamed">家畜モード (Tamed Mode)</h3>
-        <h3 id="flow-sub-title-wild" class="section-sub-title section-sub-title--wild">野生モード (Wild Mode)</h3>
+        <h3 id="flow-sub-title-tamed" class="section-sub-title section-sub-title--tamed" data-fx="fadein-text">家畜モード (Tamed Mode)</h3>
+        <h3 id="flow-sub-title-wild" class="section-sub-title section-sub-title--wild" data-fx="fadein-text">野生モード (Wild Mode)</h3>
       </div>
       <!-- Flow Content Tamed -->
       <ul class="flow__list flow__list--tamed">
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">02</span></div>
@@ -232,7 +244,7 @@
             <img src="images/image-setup-tamed.png" alt="設定画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">03</span></div>
@@ -242,7 +254,7 @@
             <img src="images/image-word-set-tamed.png" alt="ワード設定画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">04</span></div>
@@ -252,7 +264,7 @@
             <img src="images/image-word-distribution.png" alt="ワード配布画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">05</span></div>
@@ -262,7 +274,7 @@
             <img src="images/image-discussion-tamed.png" alt="討論画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">06</span></div>
@@ -272,7 +284,7 @@
             <img src="images/image-vote.png" alt="投票画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">07</span></div>
@@ -289,7 +301,7 @@
             <img src="images/image-wolf-chance.png" alt="ウルフ逆転チャンス画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">08</span></div>
@@ -309,7 +321,7 @@
       </ul>
       <!-- Flow Content Wild -->
       <ul class="flow__list flow__list--wild">
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">02</span></div>
@@ -319,7 +331,7 @@
             <img src="images/image-setup-wild.png" alt="設定画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">03</span></div>
@@ -329,7 +341,7 @@
             <img src="images/image-word-distribution.png" alt="ワード配布画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">04</span></div>
@@ -339,7 +351,7 @@
             <img src="images/image-discussion-wild.png" alt="討論画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">05</span></div>
@@ -349,7 +361,7 @@
             <img src="images/image-vote.png" alt="投票画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">06</span></div>
@@ -366,7 +378,7 @@
             <img src="images/image-wolf-chance.png" alt="ウルフ逆転チャンス画面のイメージ">
           </div>
         </li>
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">07</span></div>
@@ -385,11 +397,10 @@
         </li>
       </ul>
     </div>
-
     <div class="flow__content">
-      <h3 class="section-sub-title">ゲームの終了</h3>
+      <h3 class="section-sub-title" data-fx="fadein-text">ゲームの終了</h3>
       <ul class="flow__list">
-        <li class="flow__item">
+        <li class="flow__item" data-fx="fadein" style="--fadein-x: 0px; --fadein-y: 24px;">
           <div class="flow__item-content">
             <div class="flow__item-text">
               <div class="flow__item-step">Step<span class="flow__item-step--number">??</span></div>
@@ -400,12 +411,12 @@
           </div>
         </li>
       </ul>
-      <p class="promo-text--last">みんなでワードウルフを楽しもう！</p>
+      <p class="promo-text--last" data-fx="fadein-text">みんなでワードウルフを楽しもう！</p>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta">
+  <section class="cta" data-fx="blur">
     <div class="cta__content">
       <p class="cta__text promo-text">お題を見て、話して、見破れ<span class="promo-text--back">騙せ</span></p>
       <a class="cta__button" href="https://wa-dy.github.io/app-01-wordwolf/" target="_blank">みんなで遊ぶ</a>
