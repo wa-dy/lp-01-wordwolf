@@ -7,7 +7,7 @@
   --fadein-y: 20px;
 }
 
-/* 回転のキーフレーム */
+/* prettier-ignore */
 @-webkit-keyframes spin {
   from {
     transform: rotate(0deg);
@@ -53,22 +53,11 @@
 [data-fx=fadein] {
   opacity: 0;
   transform: translate(var(--fadein-x), var(--fadein-y));
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 1.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
-[data-fx=fadein].is-active {
+[data-fx=fadein].is-active, [data-fx=split-text].is-active [data-fx=fadein] {
   opacity: 1;
   transform: translate(0, 0);
-}
-
-.fadein-letter {
-  opacity: 0;
-  transform: translate(var(--fadein-x), var(--fadein-y));
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-[data-fx=fadein-text].is-active .fadein-letter {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition-delay: calc(var(--index) * 0.05s);
 }
 
 [data-fx=rotate] {
@@ -79,6 +68,17 @@
 [data-fx=rotate].is-active {
   opacity: 1;
   transform: rotate(var(--rotate-angle));
+}
+
+.fadein-letter {
+  opacity: 0;
+  transform: translate(var(--fadein-x), var(--fadein-y));
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.is-active > .fadein-letter {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: calc(var(--index) * 0.03s);
 }
 
 /* ===========================================

@@ -41,13 +41,13 @@
 
   effectTargets.forEach(el => effectObserver.observe(el));
 
-    // ===========================================
-  //  フェードイン用のテキスト分割処理
+  // ===========================================
+  //  フェードインテキスト用の処理
   // ===========================================
 
-  const splitTextTargets = document.querySelectorAll('[data-fx="fadein-text"]');
+  const fadeinTextTargets = document.querySelectorAll('[data-fx="fadein-text"]');
 
-  splitTextTargets.forEach(target => {
+  fadeinTextTargets.forEach(target => {
     const text = target.textContent.trim();
     const letters = text.split('');
     target.innerHTML = '';
@@ -59,6 +59,22 @@
       span.style.setProperty('--index', index);
       target.appendChild(span);
     })
+  });
+
+  // ===========================================
+  //  タイプライターテキスト用の処理
+  // ===========================================
+
+  const typewriterTextTargets = document.querySelectorAll('[data-fx="typewriter-text"]');
+
+  typewriterTextTargets.forEach(target => {
+    const text = target.textContent.trim();
+    target.innerHTML = '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    div.classList.add('typewriter-text');
+    div.style.setProperty("--characters", text.length);
+    target.appendChild(div);
   });
 
   // ===========================================
