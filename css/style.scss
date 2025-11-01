@@ -873,7 +873,7 @@ $duration-cta-button: 0.3s;
 
   &__list {
     @include content-flex();
-    gap: 16px;
+    gap: 32px;
     width: 100%;
     max-width: 800px;
     padding: 0 64px;
