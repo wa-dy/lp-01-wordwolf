@@ -35,7 +35,7 @@
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -15%',
+    rootMargin: '0px 0px -20%',
     threshold: 0,
   });
 
@@ -62,22 +62,6 @@
   });
 
   // ===========================================
-  //  タイプライターテキスト用の処理
-  // ===========================================
-
-  const typewriterTextTargets = document.querySelectorAll('[data-fx="typewriter-text"]');
-
-  typewriterTextTargets.forEach(target => {
-    const text = target.textContent.trim();
-    target.innerHTML = '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    div.classList.add('typewriter-text');
-    div.style.setProperty("--characters", text.length);
-    target.appendChild(div);
-  });
-
-  // ===========================================
   //  ゲームモード切り替え
   // ===========================================
 
@@ -90,11 +74,13 @@
   tamedMode.addEventListener('click', () => {
     flowSection.classList.remove('is-wild');
     flowSection.classList.add('is-tamed');
+    flowSection.style.setProperty('--mode-bg-color', 'var(--mode-bg-color-tamed)');
   });
 
   wildMode.addEventListener('click', () => {
     flowSection.classList.remove('is-tamed');
     flowSection.classList.add('is-wild');
+    flowSection.style.setProperty('--mode-bg-color', 'var(--mode-bg-color-wild)');
   });
 
   flowSubTitleTamed.addEventListener('click', () => tamedMode.click());

@@ -2,20 +2,20 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="スマホ1台ですぐ遊べる！完全無料・登録不要のワードウルフゲーム『みんなのワードウルフ』。友達と一緒に白熱の心理戦を楽しもう！">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="スマホ1台ですぐ遊べる！完全無料・登録不要のワードウルフゲーム『みんなのワードウルフ』。友達と一緒に白熱の心理戦を楽しもう！" />
   <title>みんなのワードウルフ｜ブラウザで遊べる心理戦ゲーム</title>
   <!-- <link rel="icon" href=""> -->
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
   <!-- reset.css ress -->
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body id="page" class="page">
@@ -29,45 +29,75 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
-    <div class="hero__mainvisual">
-      <div class="hero__catchcopy">
-        <h1 class="hero__title" data-fx="blur">みんなのワードウルフ</h1>
-        <p data-fx="fadein-text">話して笑って、裏切られる！会話型推理ゲーム</p>
-        <p data-fx="fadein-text">完全無料！登録不要！スマホ１台ですぐ盛り上がる！</p>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__text">
+          <div>
+            <h1 class="hero__title" data-fx="blur">みんなのワードウルフ</h1>
+            <p data-fx="fadein-text">
+              話して笑って、裏切られる！会話型推理ゲーム
+            </p>
+          </div>
+          <div class="hero__catch">
+            <span class="hero__catch-icon" data-fx="zoomup" style="--delay: 0.4s;">完全無料！</span>
+            <span class="hero__catch-icon" data-fx="zoomup" style="--delay: 0.6s;">登録不要！</span>
+          </div>
+        </div>
+        <img class="hero__illust-moon float-image float-image--red" src="images/illust-moon.png" alt="月のイラスト"
+          data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;" />
+        <img class="hero__illust-cloud float-image float-image--blue" src="images/illust-cloud.png" alt="雲のイラスト"
+          data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;" />
+        <img class="hero__illust-tree-1 float-image float-image--blue" src="images/illust-tree.png" alt="１本目の木のイラスト"
+          data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;" />
+        <img class="hero__illust-tree-2 float-image float-image--blue" src="images/illust-tree.png" alt="２本目の木のイラスト"
+          data-fx="fadein" style="--fadein-x: 16px; --fadein-y: 0px;" />
+        <img class="hero__illust-tree-3 float-image float-image--blue" src="images/illust-tree.png" alt="３本目の木のイラスト"
+          data-fx="fadein" style="--fadein-x: -12px; --fadein-y: 0px;" />
+        <img class="hero__illust-fire float-image float-image--red" src="images/illust-fire.png" alt="焚き火のイラスト"
+          data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;" />
+        <img class="hero__illust-app float-image" src="images/illust-app.png" alt="アプリ画面のイラスト" data-fx="fadein"
+          style="--fadein-x: 0px; --fadein-y: 24px;" />
       </div>
-      <img class="hero__illust-moon float-image float-image--red" src="images/illust-moon.png" alt="月のイラスト" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-      <img class="hero__illust-cloud float-image float-image--blue" src="images/illust-cloud.png" alt="雲のイラスト" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-      <img class="hero__illust-tree float-image float-image--blue" src="images/illust-tree.png" alt="木のイラスト" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-      <img class="hero__illust-fire float-image float-image--red" src="images/illust-fire.png" alt="焚き火のイラスト" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-      <img class="hero__illust-app float-image" src="images/illust-app.png" alt="アプリ画面のイラスト" data-fx="fadein" style="--fadein-x: 0px; --fadein-y: 24px;">
     </div>
   </section>
 
   <!-- Scenes Section -->
   <section id="scenes" class="scenes">
-    <div class="scenes__content">
-      <h2 class="section-title" data-fx="fadein-text">こんな時ありませんか？</h2>
-      <ul class="scenes__list">
-        <li class="scenes__item" data-fx="rotate" style="--rotate-angle: -6deg;">
-          <img src="images/illust-excited.png" alt="はしゃいでいる画像">
-          <h3 class="scenes__item-title">仲間と盛り上がりたい時！</h3>
-        </li>
-        <li class="scenes__item" data-fx="rotate" style="--rotate-angle: 12deg;">
-          <img src="images/illust-playing.png" alt="遊びを模索している画像">
-          <h3 class="scenes__item-title">いまの遊びから、<br>ちょっと気分を変えたい時！</h3>
-        </li>
-        <li class="scenes__item" data-fx="rotate" style="--rotate-angle: -18deg;">
-          <img src="images/illust-bored.png" alt="退屈している画像">
-          <h3 class="scenes__item-title">ちょっとした空き時間を<br>楽しく埋めたい時！</h3>
-        </li>
-      </ul>
-      <div>
-        <p class="promo-text" data-fx="fadein-text">そんな時は</p>
-        <p class="promo-text--title" data-fx="blur">みんなのワードウルフ！</p>
-      </div>
-      <div>
-        <p class="promo-text" data-fx="fadein-text">スマホ１台、登録不要で</p>
-        <p class="promo-text" data-fx="fadein-text">誰でもすぐに遊べます！</p>
+    <div class="scenes__inner">
+      <div class="scenes__content">
+        <h2 class="section-title" data-fx="fadein-text">
+          こんな時ありませんか？
+        </h2>
+        <ul class="scenes__list">
+          <li class="scenes__item" data-fx="rotate" style="--rotate-angle: -6deg">
+            <img src="images/illust-excited.png" alt="はしゃいでいる画像" />
+            <h3 class="scenes__item-title">仲間と盛り上がりたい時！</h3>
+          </li>
+          <li class="scenes__item" data-fx="rotate" style="--rotate-angle: 12deg">
+            <img src="images/illust-playing.png" alt="遊びを模索している画像" />
+            <h3 class="scenes__item-title">
+              いまの遊びから、<br />ちょっと気分を変えたい時！
+            </h3>
+          </li>
+          <li class="scenes__item" data-fx="rotate" style="--rotate-angle: -18deg">
+            <img src="images/illust-bored.png" alt="退屈している画像" />
+            <h3 class="scenes__item-title">
+              ちょっとした空き時間を<br />楽しく埋めたい時！
+            </h3>
+          </li>
+        </ul>
+        <div>
+          <p class="promo-text-sub" data-fx="fadein-text">そんな時は</p>
+          <p class="promo-text-title" data-fx="blur">
+            みんなのワードウルフ！
+          </p>
+        </div>
+        <div>
+          <p class="promo-text" data-fx="fadein-text">完全無料！登録不要！</p>
+          <p class="promo-text-sub" data-fx="fadein-text">
+            スマホ１台で誰でもすぐに遊べます！
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -75,387 +105,527 @@
   <!-- CTA Section -->
   <section class="cta">
     <div class="cta__content" data-fx="blur">
-      <p class="cta__text promo-text">お題を見て、話して、見破れ<span class="promo-text--back">騙せ</span></p>
+      <p class="cta__text promo-text">
+        お題を見て、話して、見破れ<span class="cta__text--back">騙せ</span>
+      </p>
       <a class="cta__button" href="https://wa-dy.github.io/app-01-wordwolf/" target="_blank">みんなで遊ぶ</a>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about">
-    <div class="about__content">
-      <h2 class="section-title" data-fx="fadein-text">そもそもワードウルフって？</h2>
-      <div class="about__text">
-        <p data-fx="fadein-text">ワードウルフは、みんなで話して盛り上がりながら遊ぶ会話型の推理ゲームです。</p>
-        <p data-fx="fadein-text">参加者の中でひとりだけ、少しだけ違うお題を与えられた人（ウルフ）がいます。</p>
-        <p data-fx="fadein-text">全員で自由にトークをしながら、「誰がウルフなのか？」を探り合います。</p>
-        <p data-fx="fadein-text">ウルフは正体を隠しきれば勝ち、他のみんなは見抜ければ勝ち！</p>
-        <p data-fx="fadein-text">スマホ1台で手軽に楽しめる、盛り上がり必至のパーティーゲームです。</p>
-      </div>
-      <div>
-        <p class="promo-text" data-fx="fadein-text">そんなワードウルフを</p>
-        <p class="promo-text" data-fx="fadein-text">このアプリならスマホ１台で</p>
-        <p class="promo-text" data-fx="fadein-text">簡単に楽しめる！</p>
+    <div class="about__inner">
+      <div class="about__content">
+        <h2 class="section-title" data-fx="fadein-text">
+          そもそもワードウルフって？
+        </h2>
+        <div class="about__text">
+          <p data-fx="fadein-text">
+            ワードウルフは、みんなで話して盛り上がりながら遊ぶ会話型の推理ゲームです。
+          </p>
+          <p data-fx="fadein-text">
+            参加者の中でひとりだけ、少しだけ違うお題を与えられた人（ウルフ）がいます。
+          </p>
+          <p data-fx="fadein-text">
+            全員で自由にトークをしながら、「誰がウルフなのか？」を探り合います。
+          </p>
+          <p data-fx="fadein-text">
+            ウルフは正体を隠しきれば勝ち、他のみんなは見抜ければ勝ち！
+          </p>
+          <p data-fx="fadein-text">
+            スマホ1台で手軽に楽しめる、盛り上がり必至のパーティーゲームです。
+          </p>
+        </div>
+        <div>
+          <p class="promo-text-sub" data-fx="fadein-text">
+            そんなワードウルフを
+          </p>
+          <p class="promo-text-sub" data-fx="fadein-text">
+            このアプリならスマホ１台で
+          </p>
+          <p class="promo-text" data-fx="fadein-text">簡単に楽しめる！</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Features Section -->
   <section id="features" class="features">
-    <div class="features__content">
-      <h2 class="section-title" data-fx>
-        <span class="section-title--title" data-fx="blur">みんなのワードウルフ</span><span data-fx="fadein-text">の特徴</span>
-      </h2>
-      <ul class="features__list">
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">完全無料で楽しめる！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-free.svg" alt="無料のアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
-            <p data-fx="fadein-text">登録も課金も一切なし。誰でも気軽にワードウルフを始められます！</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">インストール不要ですぐ遊べる！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-network.svg" alt="ネットワークのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
-            <p data-fx="fadein-text">ブラウザを開くだけでOK。アプリを入れる手間なく、思い立った瞬間にプレイ可能！</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">選べる2つの遊び方！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-controller.svg" alt="コントローラーのアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
-            <p data-fx="fadein-text">自動お題モードでサクッと遊ぶもよし、手動お題モードでオリジナルお題を楽しむもよし！自由にモードを選べます。</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">討論終了はタイマー音でお知らせ！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-stopwatch.svg" alt="ストップウォッチのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
-            <p data-fx="fadein-text">話し合いの時間をアラームで通知。ゲーム進行もスムーズで、時間管理の心配なし！</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">投票も結果もスマホ1台で完結！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-vote.svg" alt="投票のアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
-            <p data-fx="fadein-text">全員での投票がアプリ上で簡単に完了。結果もすぐに表示されるので、手間なく盛り上がれます。</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">勝敗は自動スコア集計！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-scorenote.svg" alt="スコアノートのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
-            <p data-fx="fadein-text">誰が一番活躍したかもひと目で分かる！勝敗やスコアの管理もアプリが自動で行います。</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">バレてもまだチャンスあり！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-wolf.svg" alt="オオカミのアイコン" data-fx="rotate" style="--rotate-angle: -360deg;">
-            <p data-fx="fadein-text">ウルフが見破られても、相手のお題を当てられれば逆転勝利！最後の一瞬までハラハラが止まらない！</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <h3 class="item-title" data-fx="fadein-text">途中で中断しても続きから再開！</h3>
-          <div class="features__item-content" data-fx>
-            <img class="features__item-icon" src="images/icon-reload.svg" alt="リロードのアイコン" data-fx="rotate" style="--rotate-angle: 360deg;">
-            <p data-fx="fadein-text">ブラウザを閉じてもデータは保持されるので、途中で中断しても続きから再開可能。忙しいときでも安心です。</p>
-          </div>
-        </li>
-      </ul>
+    <div class="features__inner">
+      <div class="features__content">
+        <h2 class="section-title" data-fx>
+          <span class="section-title--title" data-fx="blur">みんなのワードウルフ</span><span data-fx="fadein-text">の特徴</span>
+        </h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              完全無料で楽しめる！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-free.svg" alt="無料のアイコン" data-fx="rotate"
+                style="--rotate-angle: -360deg" />
+              <p data-fx="fadein-text">
+                登録も課金も一切なし。誰でも気軽にワードウルフを始められます！
+              </p>
+            </div>
+          </li>
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              インストール不要ですぐ遊べる！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-network.svg" alt="ネットワークのアイコン" data-fx="rotate"
+                style="--rotate-angle: 360deg" />
+              <p data-fx="fadein-text">
+                ブラウザを開くだけでOK。アプリを入れる手間なく、思い立った瞬間にプレイ可能！
+              </p>
+            </div>
+          </li>
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              選べる2つの遊び方！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-controller.svg" alt="コントローラーのアイコン" data-fx="rotate"
+                style="--rotate-angle: -360deg" />
+              <p data-fx="fadein-text">
+                自動お題モードでサクッと遊ぶもよし、手動お題モードでオリジナルお題を楽しむもよし！自由にモードを選べます。
+              </p>
+            </div>
+          </li>
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              討論終了はタイマー音でお知らせ！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-stopwatch.svg" alt="ストップウォッチのアイコン" data-fx="rotate"
+                style="--rotate-angle: 360deg" />
+              <p data-fx="fadein-text">
+                話し合いの時間をアラームで通知。ゲーム進行もスムーズで、時間管理の心配なし！
+              </p>
+            </div>
+          </li>
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              投票も結果もスマホ1台で完結！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-vote.svg" alt="投票のアイコン" data-fx="rotate"
+                style="--rotate-angle: -360deg" />
+              <p data-fx="fadein-text">
+                全員での投票がアプリ上で簡単に完了。結果もすぐに表示されるので、手間なく盛り上がれます。
+              </p>
+            </div>
+          </li>
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              勝敗は自動スコア集計！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-scorenote.svg" alt="スコアノートのアイコン" data-fx="rotate"
+                style="--rotate-angle: 360deg" />
+              <p data-fx="fadein-text">
+                誰が一番活躍したかもひと目で分かる！勝敗やスコアの管理もアプリが自動で行います。
+              </p>
+            </div>
+          </li>
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              バレてもまだチャンスあり！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-wolf.svg" alt="オオカミのアイコン" data-fx="rotate"
+                style="--rotate-angle: -360deg" />
+              <p data-fx="fadein-text">
+                ウルフが見破られても、相手のお題を当てられれば逆転勝利！最後の一瞬までハラハラが止まらない！
+              </p>
+            </div>
+          </li>
+          <li class="features__item">
+            <h3 class="item-title" data-fx="fadein-text">
+              途中で中断しても続きから再開！
+            </h3>
+            <div class="features__item-content" data-fx>
+              <img class="features__item-icon" src="images/icon-reload.svg" alt="リロードのアイコン" data-fx="rotate"
+                style="--rotate-angle: 360deg" />
+              <p data-fx="fadein-text">
+                ブラウザを閉じてもデータは保持されるので、途中で中断しても続きから再開可能。忙しいときでも安心です。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta" data-fx="blur">
-    <div class="cta__content">
-      <p class="cta__text promo-text">お題を見て、話して、見破れ<span class="promo-text--back">騙せ</span></p>
+  <section class="cta">
+    <div class="cta__content" data-fx="blur">
+      <p class="cta__text promo-text">
+        お題を見て、話して、見破れ<span class="cta__text--back">騙せ</span>
+      </p>
       <a class="cta__button" href="https://wa-dy.github.io/app-01-wordwolf/" target="_blank">みんなで遊ぶ</a>
     </div>
   </section>
 
   <!-- Flow Section -->
   <section id="flow" class="flow is-tamed">
-    <div class="flow__content">
-      <h2 class="section-title" data-fx="fadein-text">ゲームの流れ</h2>
-      <ul class="flow__list">
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">00</span></div>
-              <h4 class="item-title">ブラウザでアクセス！</h4>
-              <p>スマホやPCでブラウザを開いてアクセスするだけ。すぐにゲームスタートです！</p>
+    <div class="flow__inner">
+      <div class="flow__content">
+        <h2 class="section-title" data-fx="fadein-text">ゲームの流れ</h2>
+        <ul class="flow__list">
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">00</span>
+                </div>
+                <h4 class="item-title">ブラウザでアクセス！</h4>
+                <p>スマホやPCでブラウザを開いてアクセスするだけ。すぐにゲームスタートです！</p>
+              </div>
+              <img class="flow__item-image" src="images/image-top.png" alt="トップ画面のイメージ" />
             </div>
-            <img src="images/image-top.png" alt="トップ画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">01</span></div>
-              <h4 class="item-title">遊び方を決めよう！</h4>
-              <p>
-                まずはゲームの進め方を選択。ラウンドごとにマスターがワードを設定する『家畜モード』と、全員がプレイヤーとしてランダムお題で遊ぶ『野生モード』があります。下の切り替えスイッチでモードの詳細を確認して、自分たちに合った遊び方を選んでください。
-              </p>
-              <p class="text--red">※実際にモードを切り替えてみてください。その後の説明がモードごとに変わります。</p>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">01</span>
+                </div>
+                <h4 class="item-title">遊び方を決めよう！</h4>
+                <p>
+                  まずはゲームの進め方を選択。ラウンドごとにマスターがワードを設定する『家畜モード』と、全員がプレイヤーとしてランダムお題で遊ぶ『野生モード』があります。下の切り替えスイッチでモードの詳細を確認して、自分たちに合った遊び方を選んでください。
+                </p>
+                <p class="text--red">※実際にモードを切り替えてみてください。その後の説明がモードごとに変わります。</p>
+              </div>
             </div>
-          </div>
-          <div class="flow__mode-selector">
-            <h4 class="flow__mode-selector-title">ゲームモード選択</h4>
-            <div class="flow__mode-selector-toggle">
-              <label class="flow__mode-selector-label flow__mode-selector-label--tamed" id="tamed-mode"><input
-                  type="radio" name="game-mode" style="display: none;" checked>家畜モード</label>
-              <label class="flow__mode-selector-label flow__mode-selector-label--wild" id="wild-mode"><input
-                  type="radio" name="game-mode" style="display: none;">野生モード</label>
-              <span class="flow__mode-selector-slider"></span>
+            <div class="flow__mode-selector">
+              <h4 class="flow__mode-selector-title">ゲームモード選択</h4>
+              <div class="flow__mode-selector-toggle">
+                <label class="flow__mode-selector-label flow__mode-selector-label--tamed" id="tamed-mode"><input
+                    type="radio" name="game-mode" style="display: none" checked />家畜モード</label>
+                <label class="flow__mode-selector-label flow__mode-selector-label--wild" id="wild-mode"><input
+                    type="radio" name="game-mode" style="display: none" />野生モード</label>
+                <span class="flow__mode-selector-slider"></span>
+              </div>
+              <div class="flow__mode-selector-desc">
+                <ul class="flow__mode-selector-desc-list">
+                  <li class="flow__mode-selector-desc-item flow__mode-selector-desc-item--tamed">
+                    <h5 class="flow__mode-selector-desc-title">
+                      家畜モード(Tamed Mode)
+                    </h5>
+                    <p class="flow__mode-selector-desc-text">
+                      ラウンドごとに1人のマスターが順番に選ばれ、お題を設定します。他のプレイヤーはそのお題でワードウルフをプレイします。マスターは議論には参加せず、観察者として進行を楽しめます。
+                    </p>
+                  </li>
+                  <li class="flow__mode-selector-desc-item flow__mode-selector-desc-item--wild">
+                    <h5 class="flow__mode-selector-desc-title">
+                      野生モード(Wild Mode)
+                    </h5>
+                    <p class="flow__mode-selector-desc-text">
+                      全員がプレイヤーとしてゲームに参加し、お題は自動でランダムに選ばれます。よりカジュアルにテンポよく遊びたいときにおすすめのモードです。
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="flow__mode-selector-desc">
-              <ul class="flow__mode-selector-desc-list">
-                <li class="flow__mode-selector-desc-item flow__mode-selector-desc-item--tamed">
-                  <h5 class="flow__mode-selector-desc-title">家畜モード(Tamed Mode)</h5>
-                  <p class="flow__mode-selector-desc-text">
-                    ラウンドごとに1人のマスターが順番に選ばれ、お題を設定します。他のプレイヤーはそのお題でワードウルフをプレイします。マスターは議論には参加せず、観察者として進行を楽しめます。</p>
-                </li>
-                <li class="flow__mode-selector-desc-item flow__mode-selector-desc-item--wild">
-                  <h5 class="flow__mode-selector-desc-title">野生モード(Wild Mode)</h5>
-                  <p class="flow__mode-selector-desc-text">
-                    全員がプレイヤーとしてゲームに参加し、お題は自動でランダムに選ばれます。よりカジュアルにテンポよく遊びたいときにおすすめのモードです。</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="flow__content flow__content--mode">
-      <div class="flow__mode-title-container">
-        <h3 id="flow-sub-title-tamed" class="section-sub-title section-sub-title--tamed" data-fx="fadein-text">家畜モード (Tamed Mode)</h3>
-        <h3 id="flow-sub-title-wild" class="section-sub-title section-sub-title--wild" data-fx="fadein-text">野生モード (Wild Mode)</h3>
+          </li>
+        </ul>
       </div>
-      <!-- Flow Content Tamed -->
-      <ul class="flow__list flow__list--tamed">
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">02</span></div>
-              <h4 class="item-title">簡単なゲーム設定をしよう！</h4>
-              <p>参加する人数やプレイヤー名を入力し、討論時間を設定します。家畜モードでは、毎ラウンドマスターが選出されるため、4人以上の参加が必要です。</p>
-            </div>
-            <img src="images/image-setup-tamed.png" alt="設定画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">03</span></div>
-              <h4 class="item-title">マスターがお題を入力！</h4>
-              <p>マスターが「村人ワード」と「ウルフワード」の2つを設定します。全体の会話バランスが崩れないよう、似た内容で設定するのがコツです。</p>
-            </div>
-            <img src="images/image-word-set-tamed.png" alt="ワード設定画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">04</span></div>
-              <h4 class="item-title">順番にワードを確認！</h4>
-              <p>マスターが設定したお題が各プレイヤーに割り振られます。自分のワードだけを確認しましょう。心理戦はもうはじまっています。</p>
-            </div>
-            <img src="images/image-word-distribution.png" alt="ワード配布画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">05</span></div>
-              <h4 class="item-title">討論をはじめよう！</h4>
-              <p>推理や駆け引きで場を盛り上げましょう。※討論中も自分のワードを確認できます。ただし——お題を直接口にしたり、明確に連想できる発言はNGです。</p>
-            </div>
-            <img src="images/image-discussion-tamed.png" alt="討論画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">06</span></div>
-              <h4 class="item-title">怪しい人に投票！</h4>
-              <p>ウルフだと思う人に投票しましょう。まだ話し足りない場合は、再討論することも可能です。※逆に討論を途中で切り上げて投票へ進むこともできます。</p>
-            </div>
-            <img src="images/image-vote.png" alt="投票画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">07</span></div>
-              <h4 class="item-title">投票結果をチェック！</h4>
-              <p>ウルフが指名されなかったり、票が割れるとウルフの勝利！逆にウルフを指名できれば村人の勝利…と思いきや、その場合ウルフには逆転チャンスがあります！</p>
-            </div>
-            <img src="images/image-vote-result.png" alt="設定画面のイメージ">
-          </div>
-          <div class="flow__item-sub-content">
-            <div class="flow__item-text--sub">
-              <h4 class="item-title">ウルフの逆転チャンス！</h4>
-              <p>ウルフが村人のワードを当てることができたら、ウルフの逆転勝利！</p>
-            </div>
-            <img src="images/image-wolf-chance.png" alt="ウルフ逆転チャンス画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">08</span></div>
-              <h4 class="item-title">ラウンドのゲーム結果！</h4>
-              <p>このラウンドの結果が表示され、誰が勝ったかすぐに分かります。次のラウンドを始めることも、ここでゲームを終えることも可能です。</p>
-            </div>
-            <img src="images/image-round-result-tamed.png" alt="ラウンド結果画面のイメージ">
-          </div>
-          <div class="flow__item-sub-content">
-            <div class="flow__item-text--sub">
-              <h4 class="item-title">スコアの計算ルール！</h4>
-              <p>スコアがどう決まるのか、確認してみましょう！</p>
-            </div>
-            <img src="images/image-scoring-rules.png" alt="スコアの計算ルールのイメージ">
-          </div>
-        </li>
-      </ul>
-      <!-- Flow Content Wild -->
-      <ul class="flow__list flow__list--wild">
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">02</span></div>
-              <h4 class="item-title">簡単なゲーム設定をしよう！</h4>
-              <p>参加する人数やプレイヤー名を入力し、討論時間を設定します。野生モードでは、自動でお題が設定されるため、3人からゲームがはじめられます。</p>
-            </div>
-            <img src="images/image-setup-wild.png" alt="設定画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">03</span></div>
-              <h4 class="item-title">順番にワードを確認！</h4>
-              <p>自動で設定されたお題が各プレイヤーに割り振られます。自分のワードだけを確認しましょう。心理戦はもうはじまっています。</p>
-            </div>
-            <img src="images/image-word-distribution.png" alt="ワード配布画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">04</span></div>
-              <h4 class="item-title">討論をはじめよう！</h4>
-              <p>推理や駆け引きで場を盛り上げましょう。ただし——お題を直接口にしたり、明確に連想できる発言はNGです。※討論中も自分のワードを確認できます。</p>
-            </div>
-            <img src="images/image-discussion-wild.png" alt="討論画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">05</span></div>
-              <h4 class="item-title">怪しい人に投票！</h4>
-              <p>ウルフだと思う人に投票しましょう。まだ話し足りない場合は、再討論することも可能です。※逆に討論を途中で切り上げて投票へ進むこともできます。</p>
-            </div>
-            <img src="images/image-vote.png" alt="投票画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">06</span></div>
-              <h4 class="item-title">投票結果をチェック！</h4>
-              <p>ウルフが指名されなかったり、票が割れるとウルフの勝利！逆にウルフを指名できれば村人の勝利…と思いきや、その場合ウルフには逆転チャンスがあります！</p>
-            </div>
-            <img src="images/image-vote-result.png" alt="設定画面のイメージ">
-          </div>
-          <div class="flow__item-sub-content">
-            <div class="flow__item-text--sub">
-              <h4 class="item-title">ウルフの逆転チャンス！</h4>
-              <p>ウルフが村人のワードを当てることができたら、ウルフの逆転勝利！</p>
-            </div>
-            <img src="images/image-wolf-chance.png" alt="ウルフ逆転チャンス画面のイメージ">
-          </div>
-        </li>
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">07</span></div>
-              <h4 class="item-title">ラウンドのゲーム結果！</h4>
-              <p>このラウンドの結果が表示され、誰が勝ったかすぐに分かります。次のラウンドを始めることも、ここでゲームを終えることも可能です。</p>
-            </div>
-            <img src="images/image-round-result-wild.png" alt="ラウンド結果画面のイメージ">
-          </div>
-          <div class="flow__item-sub-content">
-            <div class="flow__item-text--sub">
-              <h4 class="item-title">スコアの計算ルール！</h4>
-              <p>スコアがどう決まるのか、確認してみましょう！</p>
-            </div>
-            <img src="images/image-scoring-rules.png" alt="スコアの計算ルールのイメージ">
-          </div>
-        </li>
-      </ul>
     </div>
-    <div class="flow__content">
-      <h3 class="section-sub-title" data-fx="fadein-text">ゲームの終了</h3>
-      <ul class="flow__list">
-        <li class="flow__item" data-fx="fadein" style="--fadein-x: 0px; --fadein-y: 24px;">
-          <div class="flow__item-content">
-            <div class="flow__item-text">
-              <div class="flow__item-step">Step<span class="flow__item-step--number">??</span></div>
-              <h4 class="item-title">最終結果発表！</h4>
-              <p>ゲームの終了画面では全てのラウンドの点数が集計されて、勝者にはトロフィーが表示されます。</p>
+    <div class="flow__inner flow__inner--mode">
+      <div class="flow__content">
+        <div class="flow__mode-title-container">
+          <h3 id="flow-sub-title-tamed" class="section-sub-title section-sub-title--tamed" data-fx="fadein-text">
+            家畜モード (Tamed Mode)
+          </h3>
+          <h3 id="flow-sub-title-wild" class="section-sub-title section-sub-title--wild" data-fx="fadein-text">
+            野生モード (Wild Mode)
+          </h3>
+        </div>
+        <!-- Flow Content Tamed -->
+        <ul class="flow__list flow__list--tamed">
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">02</span>
+                </div>
+                <h4 class="item-title">簡単なゲーム設定をしよう！</h4>
+                <p>
+                  参加する人数やプレイヤー名を入力し、討論時間を設定します。家畜モードでは、毎ラウンドマスターが選出されるため、4人以上の参加が必要です。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-setup-tamed.png" alt="設定画面のイメージ" />
             </div>
-            <img src="images/image-game-result.png" alt="最終結果画面のイメージ">
-          </div>
-        </li>
-      </ul>
-      <p class="promo-text--last" data-fx="fadein-text">みんなでワードウルフを楽しもう！</p>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px">
+            <div class="flow__item-content flow__item-content--reverse">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">03</span>
+                </div>
+                <h4 class="item-title">マスターがお題を入力！</h4>
+                <p>
+                  マスターが「村人ワード」と「ウルフワード」の2つを設定します。全体の会話バランスが崩れないよう、似た内容で設定するのがコツです。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-word-set-tamed.png" alt="ワード設定画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">04</span>
+                </div>
+                <h4 class="item-title">順番にワードを確認！</h4>
+                <p>
+                  マスターが設定したお題が各プレイヤーに割り振られます。自分のワードだけを確認しましょう。心理戦はもうはじまっています。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-word-distribution.png" alt="ワード配布画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px">
+            <div class="flow__item-content flow__item-content--reverse">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">05</span>
+                </div>
+                <h4 class="item-title">討論をはじめよう！</h4>
+                <p>
+                  推理や駆け引きで場を盛り上げましょう。※討論中も自分のワードを確認できます。ただし——お題を直接口にしたり、明確に連想できる発言はNGです。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-discussion-tamed.png" alt="討論画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">06</span>
+                </div>
+                <h4 class="item-title">怪しい人に投票！</h4>
+                <p>
+                  ウルフだと思う人に投票しましょう。まだ話し足りない場合は、再討論することも可能です。※逆に討論を途中で切り上げて投票へ進むこともできます。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-vote.png" alt="投票画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px">
+            <div class="flow__item-content flow__item-content--reverse">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">07</span>
+                </div>
+                <h4 class="item-title">投票結果をチェック！</h4>
+                <p>
+                  ウルフが指名されなかったり、票が割れるとウルフの勝利！逆にウルフを指名できれば村人の勝利…と思いきや、その場合ウルフには逆転チャンスがあります！
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-vote-result.png" alt="設定画面のイメージ" />
+            </div>
+            <div class="flow__item-sub-content">
+              <div class="flow__item-text--sub">
+                <h4 class="item-title">ウルフの逆転チャンス！</h4>
+                <p>
+                  ウルフが村人のワードを当てることができたら、ウルフの逆転勝利！
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-wolf-chance.png" alt="ウルフ逆転チャンス画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">08</span>
+                </div>
+                <h4 class="item-title">ラウンドのゲーム結果！</h4>
+                <p>
+                  このラウンドの結果が表示され、誰が勝ったかすぐに分かります。次のラウンドを始めることも、ここでゲームを終えることも可能です。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-round-result-tamed.png" alt="ラウンド結果画面のイメージ" />
+            </div>
+            <div class="flow__item-sub-content">
+              <div class="flow__item-text--sub">
+                <h4 class="item-title">スコアの計算ルール！</h4>
+                <p>スコアがどう決まるのか、確認してみましょう！</p>
+              </div>
+              <img class="flow__item-image" src="images/image-scoring-rules.png" alt="スコアの計算ルールのイメージ" />
+            </div>
+          </li>
+        </ul>
+        <!-- Flow Content Wild -->
+        <ul class="flow__list flow__list--wild">
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">02</span>
+                </div>
+                <h4 class="item-title">簡単なゲーム設定をしよう！</h4>
+                <p>
+                  参加する人数やプレイヤー名を入力し、討論時間を設定します。野生モードでは、自動でお題が設定されるため、3人からゲームがはじめられます。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-setup-wild.png" alt="設定画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px">
+            <div class="flow__item-content flow__item-content--reverse">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">03</span>
+                </div>
+                <h4 class="item-title">順番にワードを確認！</h4>
+                <p>
+                  自動で設定されたお題が各プレイヤーに割り振られます。自分のワードだけを確認しましょう。心理戦はもうはじまっています。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-word-distribution.png" alt="ワード配布画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">04</span>
+                </div>
+                <h4 class="item-title">討論をはじめよう！</h4>
+                <p>
+                  推理や駆け引きで場を盛り上げましょう。ただし——お題を直接口にしたり、明確に連想できる発言はNGです。※討論中も自分のワードを確認できます。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-discussion-wild.png" alt="討論画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px">
+            <div class="flow__item-content flow__item-content--reverse">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">05</span>
+                </div>
+                <h4 class="item-title">怪しい人に投票！</h4>
+                <p>
+                  ウルフだと思う人に投票しましょう。まだ話し足りない場合は、再討論することも可能です。※逆に討論を途中で切り上げて投票へ進むこともできます。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-vote.png" alt="投票画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: -24px; --fadein-y: 0px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">06</span>
+                </div>
+                <h4 class="item-title">投票結果をチェック！</h4>
+                <p>
+                  ウルフが指名されなかったり、票が割れるとウルフの勝利！逆にウルフを指名できれば村人の勝利…と思いきや、その場合ウルフには逆転チャンスがあります！
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-vote-result.png" alt="設定画面のイメージ" />
+            </div>
+            <div class="flow__item-sub-content">
+              <div class="flow__item-text--sub">
+                <h4 class="item-title">ウルフの逆転チャンス！</h4>
+                <p>
+                  ウルフが村人のワードを当てることができたら、ウルフの逆転勝利！
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-wolf-chance.png" alt="ウルフ逆転チャンス画面のイメージ" />
+            </div>
+          </li>
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 24px; --fadein-y: 0px">
+            <div class="flow__item-content flow__item-content--reverse">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">07</span>
+                </div>
+                <h4 class="item-title">ラウンドのゲーム結果！</h4>
+                <p>
+                  このラウンドの結果が表示され、誰が勝ったかすぐに分かります。次のラウンドを始めることも、ここでゲームを終えることも可能です。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-round-result-wild.png" alt="ラウンド結果画面のイメージ" />
+            </div>
+            <div class="flow__item-sub-content">
+              <div class="flow__item-text--sub">
+                <h4 class="item-title">スコアの計算ルール！</h4>
+                <p>スコアがどう決まるのか、確認してみましょう！</p>
+              </div>
+              <img class="flow__item-image" src="images/image-scoring-rules.png" alt="スコアの計算ルールのイメージ" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flow__inner">
+      <div class="flow__content">
+        <h3 class="section-sub-title" data-fx="fadein-text">ゲームの終了</h3>
+        <ul class="flow__list">
+          <li class="flow__item" data-fx="fadein" style="--fadein-x: 0px; --fadein-y: 24px">
+            <div class="flow__item-content">
+              <div class="flow__item-text">
+                <div class="flow__item-step">Step<span class="flow__item-step--number">??</span>
+                </div>
+                <h4 class="item-title">最終結果発表！</h4>
+                <p>
+                  ゲームの終了画面では全てのラウンドの点数が集計されて、勝者にはトロフィーが表示されます。
+                </p>
+              </div>
+              <img class="flow__item-image" src="images/image-game-result.png" alt="最終結果画面のイメージ" />
+            </div>
+          </li>
+        </ul>
+        <p class="promo-text-last" data-fx="fadein-text">
+          みんなでワードウルフを楽しもう！
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta" data-fx="blur">
-    <div class="cta__content">
-      <p class="cta__text promo-text">お題を見て、話して、見破れ<span class="promo-text--back">騙せ</span></p>
+  <section class="cta">
+    <div class="cta__content" data-fx="blur">
+      <p class="cta__text promo-text">
+        お題を見て、話して、見破れ<span class="cta__text--back">騙せ</span>
+      </p>
       <a class="cta__button" href="https://wa-dy.github.io/app-01-wordwolf/" target="_blank">みんなで遊ぶ</a>
     </div>
   </section>
 
   <!-- Author Section -->
   <section id="author" class="author">
-    <div class="author__content">
-      <div class="author__profile">
-        <img class="author__profile-image" src="images/profile_icon.png" alt="制作者のプロフィールアイコン">
-        <div class="author__profile-text">
-          <h3 class="author__profile-name">Webクリエイター｜DY</h3>
-          <div class="author__profile-desc">
-            <p>国内大手電池メーカーの研究開発部門で実験エンジニアとして従事後、フリーのWebクリエーターへ。</p>
-            <p>現在はHTML/CSS/JavaScriptやWordPressを用いたサイト制作を中心に、正確性と論理性を活かしたWeb制作を行っています。</p>
+    <div class="author__inner">
+      <div class="author__content">
+        <div class="author__profile">
+          <img class="author__profile-image" src="images/profile_icon.png" alt="制作者のプロフィールアイコン" />
+          <div class="author__profile-text">
+            <h3 class="author__profile-name">Webクリエイター｜DY</h3>
+            <div class="author__profile-desc">
+              <p>
+                国内大手電池メーカーの研究開発部門で実験エンジニアとして従事後、フリーのWebクリエーターへ。
+              </p>
+              <p>
+                現在はHTML/CSS/JavaScriptやWordPressを用いたサイト制作を中心に、正確性と論理性を活かしたWeb制作を行っています。
+              </p>
+            </div>
+            <dl class="author__profile-meta">
+              <dt class="author__profile-meta-term">名称</dt>
+              <dd class="author__profile-meta-desc">ワーカロン｜workalone</dd>
+              <dt class="author__profile-meta-term">所在</dt>
+              <dd class="author__profile-meta-desc">福島県郡山市</dd>
+            </dl>
           </div>
-          <dl class="author__profile-meta">
-            <dt class="author__profile-meta-term">名称</dt>
-            <dd class="author__profile-meta-desc">ワーカロン｜workalone</dd>
-            <dt class="author__profile-meta-term">所在</dt>
-            <dd class="author__profile-meta-desc">福島県郡山市</dd>
-          </dl>
         </div>
-      </div>
-      <div class="author__contact">
-        <div class="author__contact-site">
-          <h3 class="author__contact-name">「ワーカロン｜workalone」</h3>
-          <a href="https://workalone.jp/" target="_blank">https://workalone.jp/</a>
+        <div class="author__contact">
+          <a class="author__contact-site" href="https://workalone.jp/" target="_blank">
+            <h3 class="author__contact-name">「ワーカロン｜workalone」</h3>
+            <span>https://workalone.jp/</span>
+          </a>
+          <span class="author__contact-info">※ご連絡はこちらのサイトから</span>
         </div>
-        <span class="author__contact-info">※ご連絡はこちらのサイトから</span>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer id="footer" class="footer">
-    <div class="footer__content">
-      <span class="footer__copyright">&copy; 2025 ワーカロン｜workalone</span>
+    <div class="footer__inner">
+      <div class="footer__content">
+        <span class="footer__copyright">&copy; 2025 ワーカロン｜workalone</span>
+      </div>
     </div>
   </footer>
 
