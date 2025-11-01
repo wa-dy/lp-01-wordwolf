@@ -1,7 +1,6 @@
 'use strict';
 
 {
-
   const page = document.getElementById('page');
 
   // ===========================================

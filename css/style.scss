@@ -20,18 +20,6 @@ $color-primary-2: #e8f4fd;
 $color-accent-1: #e74c3c;
 $color-accent-2: #f8d7da;
 
-$font-size-header-logo: 2rem;
-$font-size-header-logo--sp: 1.6rem;
-
-$font-size-menu: 1.6rem;
-$font-size-Heading-L: 6.4rem;
-$font-size-Heading-M: 2rem;
-$font-size-Heading-S: 1.6rem;
-$font-size-body-M: 1.4rem;
-$font-size-label: 1.2rem;
-
-$padding-home-side: 16px;
-
 $shadow: 2px 2px 0 rgba($color-text-1, 0.25);
 $shadow-lg: 4px 4px 0 rgba($color-text-1, 0.25);
 $shadow-blue: 2px 2px 0 rgba($color-primary-1, 0.25);
@@ -46,7 +34,7 @@ $duration-flow-mode-change: 0.8s;
 $mq-breakpoints: (
   "sm": 576px,
   "md": 768px,
-  "lg": 1024px,
+  "lg": 1200px,
 );
 
 // bp-mf(BreakPoint-MobileFirst)
@@ -113,13 +101,11 @@ $ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
 [data-fx="blur"] {
   opacity: 0;
   filter: blur(1rem);
-  // scale: 1.1;
 
   &.is-active {
     opacity: 1;
     filter: blur(0);
     transition: opacity 1s $ease-out-quint, filter 2s $ease-out-quint;
-    // scale 1s $ease-out-expo;
   }
 }
 
@@ -265,8 +251,12 @@ body {
   line-height: 1.5;
   color: $color-text-1;
 
-  @include bp-mf() {
+  @include bp-mf(md) {
     font-size: 1.8rem;
+  }
+
+  @include bp-mf(lg) {
+    font-size: 2rem;
   }
 }
 
@@ -299,7 +289,7 @@ $duration-section-title-width: 1.4s; // border用
   &--blue {
     filter: drop-shadow($shadow-blue);
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       filter: drop-shadow($shadow-blue-lg);
     }
   }
@@ -307,7 +297,7 @@ $duration-section-title-width: 1.4s; // border用
   &--red {
     filter: drop-shadow($shadow-red);
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       filter: drop-shadow($shadow-red-lg);
     }
   }
@@ -320,10 +310,15 @@ $duration-section-title-width: 1.4s; // border用
   position: relative;
   padding: 0 0 8px;
 
-  @include bp-mf() {
+  @include bp-mf(md) {
     font-size: 3.2rem;
     text-shadow: $shadow-blue-lg;
   }
+
+  @include bp-mf(lg) {
+    font-size: 4rem;
+  }
+
 
   &::after {
     content: "";
@@ -343,8 +338,12 @@ $duration-section-title-width: 1.4s; // border用
     font-family: $font-family-title;
     font-size: 2.8rem;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       font-size: 3.6rem;
+    }
+
+    @include bp-mf(lg) {
+      font-size: 4.4rem;
     }
   }
 }
@@ -355,7 +354,7 @@ $duration-section-title-width: 1.4s; // border用
   text-shadow: none;
   cursor: pointer;
 
-  @include bp-mf() {
+  @include bp-mf(md) {
     font-size: 2rem;
   }
 
@@ -373,9 +372,13 @@ $duration-section-title-width: 1.4s; // border用
   transition: font-size $duration-flow-mode-change $ease-out-expo,
     color $duration-flow-mode-change ease;
 
-  @include bp-mf() {
+  @include bp-mf(md) {
     font-size: 2.8rem;
     text-shadow: $shadow-blue-lg;
+  }
+
+  @include bp-mf(lg) {
+    font-size: 3.2rem;
   }
 
   &::after {
@@ -408,7 +411,7 @@ $duration-section-title-width: 1.4s; // border用
     color: $color-accent-1;
     text-shadow: $shadow-red;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       text-shadow: $shadow-red-lg;
     }
 
@@ -425,8 +428,8 @@ $duration-section-title-width: 1.4s; // border用
 .item-title {
   font-size: 2rem;
 
-  @include bp-mf() {
-    font-size: 2.4rem;
+  @include bp-mf(lg) {
+    font-size: 2.8rem;
   }
 }
 
@@ -434,8 +437,12 @@ $duration-section-title-width: 1.4s; // border用
   font-size: 2.4rem;
   text-align: center;
 
-  @include bp-mf() {
+  @include bp-mf(md) {
     font-size: 3.2rem;
+  }
+
+  @include bp-mf(lg) {
+    font-size: 4rem;
   }
 
   &-title {
@@ -443,8 +450,12 @@ $duration-section-title-width: 1.4s; // border用
     font-family: $font-family-title;
     text-align: center;
 
-    @include bp-mf() {
-      font-size: 3.6rem;
+    @include bp-mf(md) {
+      font-size: 4.4rem;
+    }
+
+    @include bp-mf(lg) {
+      font-size: 5.2rem;
     }
   }
 
@@ -452,8 +463,12 @@ $duration-section-title-width: 1.4s; // border用
     font-size: 2rem;
     text-align: center;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       font-size: 2.4rem;
+    }
+
+    @include bp-mf(lg) {
+      font-size: 2.8rem;
     }
   }
 
@@ -461,8 +476,12 @@ $duration-section-title-width: 1.4s; // border用
     font-size: 2rem;
     padding: 64px 0;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       font-size: 3.2rem;
+    }
+
+    @include bp-mf(lg) {
+      font-size: 4.4rem;
     }
   }
 }
@@ -487,7 +506,7 @@ $duration-cta-fixed: 0.6s;
   filter: drop-shadow($shadow);
   transition: scale $duration-cta-fixed ease, opacity $duration-cta-fixed ease;
 
-  @include bp-mf() {
+  @include bp-mf(md) {
     top: 32px;
     right: 48px;
     height: 128px;
@@ -543,7 +562,7 @@ $duration-cta-fixed: 0.6s;
     z-index: 1;
     text-shadow: $shadow;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       font-size: 2.8rem;
     }
   }
@@ -565,9 +584,13 @@ $duration-cta-button: 0.3s;
     @include content-flex();
     gap: 24px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 128px 32px;
       gap: 32px;
+    }
+
+    @include bp-mf(lg) {
+      padding: 192px 32px;
     }
   }
 
@@ -585,8 +608,12 @@ $duration-cta-button: 0.3s;
       color: $color-text-3;
       text-shadow: $shadow-red;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         font-size: 6.4rem;
+      }
+
+      @include bp-mf(lg) {
+        font-size: 8rem;
       }
     }
   }
@@ -602,7 +629,7 @@ $duration-cta-button: 0.3s;
     transition: translate $duration-cta-button ease,
       box-shadow $duration-cta-button ease;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 16px 160px;
       border-radius: 16px;
       font-size: 3.2rem;
@@ -614,7 +641,7 @@ $duration-cta-button: 0.3s;
       translate: 0px 2px; // 影の量
       box-shadow: none;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         translate: 0px 4px; // 影の量
       }
     }
@@ -631,7 +658,7 @@ $duration-cta-button: 0.3s;
     overflow: hidden;
     position: relative;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       height: 800px;
     }
 
@@ -646,7 +673,7 @@ $duration-cta-button: 0.3s;
           rgba($color-primary-1, 0.3) 50%,
           rgba($color-primary-1, 0) 100%);
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         height: 196px;
       }
     }
@@ -678,7 +705,7 @@ $duration-cta-button: 0.3s;
     @include content-flex();
     gap: 16px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       translate: 50% 0;
       top: 192px;
       right: 35%;
@@ -690,8 +717,12 @@ $duration-cta-button: 0.3s;
     font-family: $font-family-title;
     font-size: 3.6rem;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       font-size: 4.8rem;
+    }
+
+    @include bp-mf(lg) {
+      font-size: 6rem;
     }
   }
 
@@ -700,7 +731,7 @@ $duration-cta-button: 0.3s;
     justify-content: center;
     gap: 12px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 24px;
     }
 
@@ -714,7 +745,7 @@ $duration-cta-button: 0.3s;
       border: 2px solid $color-border-2;
       background: $color-background-1;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         font-size: 2rem;
         padding: 8px 32px;
       }
@@ -728,7 +759,7 @@ $duration-cta-button: 0.3s;
       bottom: -128px;
       left: 10%;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         width: 320px;
         bottom: -160px;
       }
@@ -741,7 +772,7 @@ $duration-cta-button: 0.3s;
         bottom: -20px;
         left: 25%;
 
-        @include bp-mf() {
+        @include bp-mf(md) {
           width: 576px;
           height: 576px;
           bottom: -52px;
@@ -757,7 +788,7 @@ $duration-cta-button: 0.3s;
         z-index: -1;
         filter: blur(1.5px);
 
-        @include bp-mf() {
+        @include bp-mf(md) {
           width: 384px;
           height: 384px;
           bottom: 0px;
@@ -768,7 +799,7 @@ $duration-cta-button: 0.3s;
       &-3 {
         display: none;
 
-        @include bp-mf() {
+        @include bp-mf(md) {
           display: block;
           z-index: -2;
           filter: blur(2px);
@@ -785,7 +816,7 @@ $duration-cta-button: 0.3s;
       bottom: -16px;
       left: 70%;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         width: 160px;
         bottom: -20px;
         left: 65%;
@@ -797,7 +828,7 @@ $duration-cta-button: 0.3s;
       top: 16px;
       right: 60%;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         width: 192px;
       }
     }
@@ -807,7 +838,7 @@ $duration-cta-button: 0.3s;
       top: 8px;
       left: 20%;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         width: 160px;
         top: 0;
         left: 15%;
@@ -825,7 +856,7 @@ $duration-cta-button: 0.3s;
     background: linear-gradient($color-primary-2, $color-background-1);
     padding: 64px 0;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 128px 0;
     }
   }
@@ -835,7 +866,7 @@ $duration-cta-button: 0.3s;
     @include content-flex();
     gap: 64px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 128px;
     }
   }
@@ -844,11 +875,15 @@ $duration-cta-button: 0.3s;
     @include content-flex();
     gap: 16px;
     width: 100%;
-    max-width: 768px;
+    max-width: 800px;
     padding: 0 64px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 0;
+    }
+
+    @include bp-mf(lg) {
+      max-width: 900px;
     }
   }
 
@@ -863,18 +898,22 @@ $duration-cta-button: 0.3s;
     gap: 8px;
     box-shadow: $shadow;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       width: 384px;
     }
 
+    @include bp-mf(lg) {
+      width: 448px;
+    }
+
     &:nth-child(odd) {
-      @include bp-mf() {
+      @include bp-mf(md) {
         align-self: flex-start;
       }
     }
 
     &:nth-child(even) {
-      @include bp-mf() {
+      @include bp-mf(md) {
         align-self: flex-end;
       }
     }
@@ -887,8 +926,12 @@ $duration-cta-button: 0.3s;
       font-size: 1.6rem;
       text-align: center;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         font-size: 2rem;
+      }
+
+      @include bp-mf(lg) {
+        font-size: 2.8rem;
       }
     }
   }
@@ -902,7 +945,7 @@ $duration-cta-button: 0.3s;
   &__inner {
     padding: 64px 16px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 128px 32px;
     }
   }
@@ -911,7 +954,7 @@ $duration-cta-button: 0.3s;
     @include content-flex();
     gap: 64px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 96px;
     }
   }
@@ -921,7 +964,7 @@ $duration-cta-button: 0.3s;
     @include content-flex();
     gap: 8px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 12px;
     }
   }
@@ -937,7 +980,7 @@ $gap-features-list-lg: 48px;
   &__inner {
     padding: 64px 16px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 128px 32px;
     }
   }
@@ -947,7 +990,7 @@ $gap-features-list-lg: 48px;
     @include content-flex();
     gap: 64px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 128px;
     }
   }
@@ -958,7 +1001,7 @@ $gap-features-list-lg: 48px;
     flex-direction: column;
     gap: 32px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       flex-direction: row;
       flex-wrap: wrap;
       gap: $gap-features-list-lg;
@@ -970,7 +1013,7 @@ $gap-features-list-lg: 48px;
     flex-direction: column;
     gap: 8px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       width: calc((100% - $gap-features-list-lg) / 2);
       gap: 12px;
     }
@@ -1020,7 +1063,7 @@ $border-flow-mode-selector-toggle: 2px;
   &__inner {
     padding: 64px 16px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 128px 32px;
     }
 
@@ -1038,7 +1081,7 @@ $border-flow-mode-selector-toggle: 2px;
     @include content-flex();
     gap: 64px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 96px;
     }
   }
@@ -1048,7 +1091,7 @@ $border-flow-mode-selector-toggle: 2px;
     @include content-flex();
     gap: 32px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       gap: 48px;
     }
 
@@ -1067,9 +1110,11 @@ $border-flow-mode-selector-toggle: 2px;
     @include content-flex();
     gap: 24px;
     border-radius: 32px;
+    max-width: 384px;
     box-shadow: $shadow, $shadow-reverse;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
+      max-width: none;
       box-shadow: $shadow-lg, $shadow-reverse;
     }
 
@@ -1077,7 +1122,7 @@ $border-flow-mode-selector-toggle: 2px;
       @include content-flex();
       gap: 16px;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         flex-direction: row;
 
         &--reverse {
@@ -1091,8 +1136,9 @@ $border-flow-mode-selector-toggle: 2px;
       gap: 8px;
       border-radius: 16px;
       overflow: hidden;
+      width: 100%;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         text-align: center;
       }
 
@@ -1110,7 +1156,7 @@ $border-flow-mode-selector-toggle: 2px;
       flex-direction: column;
       gap: 16px;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         padding: 0 32px;
       }
 
@@ -1120,7 +1166,7 @@ $border-flow-mode-selector-toggle: 2px;
     }
 
     &-image {
-      @include bp-mf() {
+      @include bp-mf(md) {
         width: 50%;
       }  
     }
@@ -1145,7 +1191,7 @@ $border-flow-mode-selector-toggle: 2px;
         font-weight: 400;
         letter-spacing: -0.24rem;
 
-        @include bp-mf() {
+        @include bp-mf(md) {
           font-size: 5.6rem;
           letter-spacing: -0.28rem;
         }
@@ -1163,7 +1209,7 @@ $border-flow-mode-selector-toggle: 2px;
     border-left: 4px solid $color-border-blue;
     border-radius: 12px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
         padding: 32px;
         border-left: 6px solid $color-border-blue;
         border-radius: 16px;
@@ -1172,7 +1218,7 @@ $border-flow-mode-selector-toggle: 2px;
     &-title {
       font-size: 2rem;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         font-size: 2.4rem;
       }
     }
@@ -1266,7 +1312,7 @@ $border-flow-mode-selector-toggle: 2px;
       &-title {
         font-size: 1.6rem;
 
-        @include bp-mf() {
+        @include bp-mf(md) {
           font-size: 2rem;
         }
       }
@@ -1280,8 +1326,12 @@ $border-flow-mode-selector-toggle: 2px;
   &__mode-title-container {
     height: 62px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       height: 80px;
+    }
+
+    @include bp-mf(lg) {
+      height: 86px;
     }
   }
 }
@@ -1294,7 +1344,7 @@ $border-flow-mode-selector-toggle: 2px;
   &__inner {
     padding: 64px 16px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 128px 32px;
     }
 
@@ -1314,7 +1364,7 @@ $border-flow-mode-selector-toggle: 2px;
     gap: 16px;
     max-width: 768px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       flex-direction: row;
       gap: 32px;
     }
@@ -1329,7 +1379,7 @@ $border-flow-mode-selector-toggle: 2px;
       flex-direction: column;
       gap: 8px;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         gap: 16px;
       }  
     }
@@ -1339,7 +1389,7 @@ $border-flow-mode-selector-toggle: 2px;
       font-weight: 500;
       text-align: center;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         font-size: 2.4rem;
         text-align: start;
       }
@@ -1350,7 +1400,7 @@ $border-flow-mode-selector-toggle: 2px;
       flex-direction: column;
       gap: 4px;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         gap: 8px;
       }  
     }
@@ -1376,7 +1426,7 @@ $border-flow-mode-selector-toggle: 2px;
     @include content-flex();
     gap: 8px;
     
-    @include bp-mf() {
+    @include bp-mf(md) {
       flex-direction: row;
     }
 
@@ -1397,7 +1447,7 @@ $border-flow-mode-selector-toggle: 2px;
       font-size: 2rem;
       font-weight: 500;
 
-      @include bp-mf() {
+      @include bp-mf(md) {
         font-size: 2.4rem;
       }  
     }
@@ -1412,7 +1462,7 @@ $border-flow-mode-selector-toggle: 2px;
   &__inner {
     padding: 8px 16px;
 
-    @include bp-mf() {
+    @include bp-mf(md) {
       padding: 12px 32px;
     }
   }
