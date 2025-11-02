@@ -485,27 +485,35 @@ ul {
 //  CTA Fixed
 // ======================================== */
 .cta-fixed {
+  max-width: 1200px;
+  margin: 0 auto;
   position: fixed;
+  inset: 0;
   z-index: 100;
+  pointer-events: none;
+}
+.cta-fixed__content {
+  position: absolute;
   top: 16px;
   right: 16px;
-  height: 96px;
+  width: 96px;
   aspect-ratio: 1/1;
   filter: drop-shadow(2px 2px 0 rgba(44, 62, 80, 0.25));
   transition: scale 0.6s ease, opacity 0.6s ease;
+  pointer-events: auto;
 }
 @media (min-width: 768px) {
-  .cta-fixed {
+  .cta-fixed__content {
     top: 32px;
-    right: 48px;
-    height: 128px;
+    right: 32px;
+    width: 128px;
   }
 }
-.is-scroll .cta-fixed {
+.is-scroll .cta-fixed__content {
   scale: 0.8;
   opacity: 0.9;
 }
-.is-scroll .cta-fixed:hover {
+.is-scroll .cta-fixed__content:hover {
   scale: 1;
   opacity: 1;
 }

@@ -497,28 +497,36 @@ $duration-section-title-width: 1.4s; // border用
 $duration-cta-fixed: 0.6s;
 
 .cta-fixed {
+  @include section-content();
   position: fixed;
+  inset: 0;
   z-index: 100;
-  top: 16px;
-  right: 16px;
-  height: 96px;
-  aspect-ratio: 1 / 1;
-  filter: drop-shadow($shadow);
-  transition: scale $duration-cta-fixed ease, opacity $duration-cta-fixed ease;
+  pointer-events: none;
 
-  @include bp-mf(md) {
-    top: 32px;
-    right: 48px;
-    height: 128px;
-  }
-
-  @at-root.is-scroll & {
-    scale: 0.8;
-    opacity: 0.9;
-
-    &:hover {
-      scale: 1;
-      opacity: 1;
+  &__content {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 96px;
+    aspect-ratio: 1 / 1;
+    filter: drop-shadow($shadow);
+    transition: scale $duration-cta-fixed ease, opacity $duration-cta-fixed ease;
+    pointer-events: auto;
+  
+    @include bp-mf(md) {
+      top: 32px;
+      right: 32px;
+      width: 128px;
+    }
+  
+    @at-root.is-scroll & {
+      scale: 0.8;
+      opacity: 0.9;
+  
+      &:hover {
+        scale: 1;
+        opacity: 1;
+      }
     }
   }
 
