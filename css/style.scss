@@ -827,7 +827,8 @@ $duration-cta-button: 0.3s;
       width: 128px;
       top: 16px;
       right: 60%;
-
+      filter: blur(1.5px);
+      
       @include bp-mf(md) {
         width: 192px;
       }
@@ -837,6 +838,7 @@ $duration-cta-button: 0.3s;
       width: 96px;
       top: 8px;
       left: 20%;
+      filter: blur(2px);
 
       @include bp-mf(md) {
         width: 160px;
@@ -997,14 +999,12 @@ $gap-features-list-lg: 48px;
 
   &__list {
     padding: 0 16px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 32px;
 
     @include bp-mf(md) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: $gap-features-list-lg;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
     }
   }
 
@@ -1014,7 +1014,6 @@ $gap-features-list-lg: 48px;
     gap: 8px;
 
     @include bp-mf(md) {
-      width: calc((100% - $gap-features-list-lg) / 2);
       gap: 12px;
     }
 
@@ -1406,18 +1405,12 @@ $border-flow-mode-selector-toggle: 2px;
     }
 
     &-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5%;
-      width: 256px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 16px;
 
       &-term {
-        width: 15%;
         color: $color-text-2;
-      }
-
-      &-desc {
-        width: 80%;
       }
     }
   }
