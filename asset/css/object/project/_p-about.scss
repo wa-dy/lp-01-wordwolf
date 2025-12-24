@@ -1,0 +1,28 @@
+@use "./../../foundation/_base.scss";
+
+.p-about {
+  &__inner {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include base.breakpoint($breakpoint: md) {
+      padding-top: 128px;
+      padding-bottom: 128px;
+    }
+  }
+
+  &__container {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 32px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 64px;
+    }
+  }
+
+  &__text {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 8px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 12px;
+    }
+  }
+}

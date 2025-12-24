@@ -1,0 +1,92 @@
+@use "./../../foundation/_base.scss";
+
+:root {
+  --duration: 0s;
+  --delay: 0s;
+  --fadein-x: 0px;
+  --fadein-y: 8px;
+}
+
+.u-fx-fadein {
+  opacity: 0;
+  translate: var(--fadein-x) var(--fadein-y);
+  transition: translate 1.4s base.$ease-out-back, opacity 1s base.$ease-out-expo;
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.u-fx-blur {
+  opacity: 0;
+  filter: blur(1rem);
+  transition: opacity 1s base.$ease-out-quint, filter 2s base.$ease-out-quint;
+  &.is-active {
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: var(--delay);
+  }
+}
+
+.u-fx-zoomup {
+  transform: scale(0);
+  &.is-active {
+    animation: scale-ease-in-elastic 1s var(--delay) reverse forwards;
+    // prettier-ignore
+    @keyframes scale-ease-in-elastic {
+      0% {transform: scale(1);}
+      4% {transform: scale(1);}
+      8% {transform: scale(1);}
+      14% {transform: scale(1);}
+      18% {transform: scale(1);}
+      26% {transform: scale(1.01);}
+      28% {transform: scale(1.01);}
+      40% {transform: scale(0.98);}
+      42% {transform: scale(0.98);}
+      56% {transform: scale(1.05);}
+      58% {transform: scale(1.04);}
+      72% {transform: scale(0.87);}
+      86% {transform: scale(1.12);}
+      100% {transform: scale(0);}
+    }
+  }
+}
+
+.u-fx-rotate {
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: transform 0.6s base.$ease-out-back, opacity 1s base.$ease-out-expo;
+  &.is-active {
+    opacity: 1;
+    transform: rotate(var(--rotate-angle));
+  }
+}
+
+.u-split-letter {
+  display: inline-block;
+
+  .u-fx-fadein-text & {
+    opacity: 0;
+    translate: var(--fadein-x) var(--fadein-y);
+    transition: translate 1.4s base.$ease-out-back, opacity 1s base.$ease-out-expo;
+    transition-delay: calc(var(--index) * 0.03s);
+  }
+  .u-fx-fadein-text.is-active & {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+// スクリーンリーダー読み取り用テキスト
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border-width: 0 !important;
+  white-space: nowrap !important;
+}

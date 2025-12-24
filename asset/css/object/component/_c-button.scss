@@ -1,0 +1,30 @@
+@use "./../../foundation/_base.scss";
+
+
+.c-button-cta {
+  $duration: 0.3s;
+  
+  padding: 12px 80px;
+  border-radius: 8px;
+  background: base.$color-primary-1;
+  font-size: 2.4rem;
+  color: base.$color-text-4;
+  box-shadow: base.$shadow;
+  text-shadow: base.$shadow;
+  transition: translate $duration ease, box-shadow $duration ease;
+  @include base.breakpoint($breakpoint: md) {
+    padding: 16px 160px;
+    border-radius: 16px;
+    font-size: 3.2rem;
+    text-shadow: base.$shadow-lg;
+    box-shadow: base.$shadow-lg;
+  }
+
+  &:hover {
+    translate: 0px 2px; // 影の量
+    box-shadow: none;
+    @include base.breakpoint($breakpoint: md) {
+      translate: 0px 4px; // 影の量
+    }
+  }
+}

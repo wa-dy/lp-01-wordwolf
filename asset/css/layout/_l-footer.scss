@@ -1,0 +1,22 @@
+@use "./../foundation/_base.scss";
+
+.l-footer {
+  &__inner {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    @include base.breakpoint($breakpoint: md) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__container {
+    @include base.flex($justify: flex-start, $align: flex-end, $direction: column);
+  }
+
+  &__copyright {
+    font-family: base.$font-family-author;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}

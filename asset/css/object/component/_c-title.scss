@@ -1,0 +1,118 @@
+@use "./../../foundation/_base.scss";
+
+$duration-border-show: 1.4s;
+
+.c-title-main {
+  font-family: base.$font-family-accent;
+  font-size: 3.6rem;
+  @include base.breakpoint($breakpoint: md) {
+    font-size: 4.8rem;
+  }
+  @include base.breakpoint($breakpoint: lg) {
+    font-size: 6rem;
+  }
+}
+
+.c-title-section {
+  position: relative;
+  padding-bottom: 8px;
+  font-size: 2.4rem;
+  text-shadow: base.$shadow-blue;
+  @include base.breakpoint($breakpoint: md) {
+    font-size: 3.2rem;
+    text-shadow: base.$shadow-blue-lg;
+  }
+  @include base.breakpoint($breakpoint: lg) {
+    font-size: 4rem;
+  }
+
+  &::after {
+    content: "";
+    @include base.position-abs($top: auto, $bottom: 0, $right: auto, $left: -16px);
+    width: 0;
+    border-bottom: 4px solid base.$color-border-2;
+    transition: width $duration-border-show ease;
+  }
+
+  &.is-active::after {
+    width: calc(100% + 32px);
+  }
+}
+.c-title-section-accent-font {
+  font-family: base.$font-family-accent;
+  font-size: 2.8rem;
+  @include base.breakpoint($breakpoint: md) {
+    font-size: 3.6rem;
+  }
+  @include base.breakpoint($breakpoint: lg) {
+    font-size: 4.4rem;
+  }
+}
+
+.c-title-content {
+  position: relative;
+  padding-bottom: 4px;
+  font-size: 2rem;
+  text-shadow: base.$shadow-blue;
+  transition: font-size base.$duration-flow-mode-change base.$ease-out-expo, color base.$duration-flow-mode-change ease;
+  @include base.breakpoint($breakpoint: md) {
+    font-size: 2.8rem;
+    text-shadow: base.$shadow-blue-lg;
+  }
+  @include base.breakpoint($breakpoint: lg) {
+    font-size: 3.2rem;
+  }
+
+  &::after {
+    content: "";
+    @include base.position-abs($top: auto, $bottom: 0, $right: auto, $left: -16px);
+    width: 0;
+    border-bottom: 2px solid base.$color-border-2;
+    transition: width $duration-border-show base.$ease-out-expo;
+  }
+  &.is-active::after {
+    width: calc(100% + 32px);
+  }
+
+  @mixin inactive-mode-style {
+    color: base.$color-text-3;
+    font-size: 1.6rem;
+    text-shadow: none;
+    cursor: pointer;
+    @include base.breakpoint($breakpoint: md) {
+      font-size: 2rem;
+    }
+    &::after {
+      width: 0;
+    }
+  }
+  &--tamed {
+    color: base.$color-primary-1;
+    .is-wild-mode & {
+      @include inactive-mode-style();
+    }
+    &::after {
+      border-color: base.$color-primary-1;
+    }
+  }
+  &--wild {
+    color: base.$color-accent-1;
+    text-shadow: base.$shadow-red;
+    @include base.breakpoint($breakpoint: md) {
+      text-shadow: base.$shadow-red-lg;
+    }
+    .is-tamed-mode & {
+      @include inactive-mode-style();
+    }
+    &::after {
+      border-color: base.$color-accent-1;
+    }
+  }
+}
+
+.c-title-item {
+  font-size: 2rem;
+  @include base.breakpoint($breakpoint: lg) {
+    font-size: 2.8rem;
+  }
+}

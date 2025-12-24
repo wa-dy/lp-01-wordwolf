@@ -1,0 +1,76 @@
+@use "./../../foundation/_base.scss";
+
+.p-scenes {
+  &__inner {
+    background: linear-gradient(base.$color-primary-2, base.$color-background-1);
+    padding: 64px 0;
+    @include base.breakpoint($breakpoint: md) {
+      padding: 128px 0;
+    }
+  }
+
+  &__container {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 64px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 128px;
+    }
+  }
+
+  &__list {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 32px;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 64px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 0;
+    }
+    @include base.breakpoint($breakpoint: lg) {
+      max-width: 900px;
+    }
+  }
+
+  &__item {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 8px;
+    width: 256px;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+    border-radius: 32px;
+    background: base.$color-background-1;
+    border: 4px solid base.$color-border-blue;
+    box-shadow: base.$shadow;
+    @include base.breakpoint($breakpoint: md) {
+      width: 384px;
+    }
+    @include base.breakpoint($breakpoint: lg) {
+      width: 448px;
+    }
+    &:nth-child(odd) {
+      @include base.breakpoint($breakpoint: md) {
+        align-self: flex-start;
+      }
+    }
+    &:nth-child(even) {
+      @include base.breakpoint($breakpoint: md) {
+        align-self: flex-end;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: -16px;
+    }
+  }
+
+  &__item-title {
+    font-size: 1.6rem;
+    text-align: center;
+    @include base.breakpoint($breakpoint: md) {
+      font-size: 2rem;
+    }
+    @include base.breakpoint($breakpoint: lg) {
+      font-size: 2.8rem;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@use "./../../foundation/_base.scss";
+
+.p-hero {
+  &__inner {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    @include base.breakpoint($breakpoint: md) {
+      height: 800px;
+    }
+    &::before {
+      content: "";
+      @include base.position-abs($top: 0, $bottom: auto, $right: 0, $left: 0);
+      height: 128px;
+      background: linear-gradient(rgba(base.$color-primary-1, 1) 0%, rgba(base.$color-primary-1, 0.3) 50%, rgba(base.$color-primary-1, 0) 100%);
+      @include base.breakpoint($breakpoint: md) {
+        height: 196px;
+      }
+    }
+    &::after {
+      content: "";
+      @include base.position-abs($top: auto, $bottom: 0, $right: 0, $left: 0);
+      height: 64px;
+      background: linear-gradient(rgba(base.$color-primary-2, 0), rgba(base.$color-primary-2, 1));
+    }
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__content {
+    @include base.position-abs($top: 128px, $bottom: auto, $right: 0, $left: 0);
+    z-index: 1;
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 16px;
+    @include base.breakpoint($breakpoint: md) {
+      align-items: flex-start;
+      @include base.position-abs($top: 192px, $bottom: auto, $right: 35%, $left: auto);
+      transform: translate(50%, 0);
+    }
+  }
+
+  &__text {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    @include base.breakpoint($breakpoint: md) {
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }
+
+  &__catch {
+    @include base.flex($justify: center, $align: flex-start, $direction: row);
+    gap: 12px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 24px;
+    }
+  }
+
+  &__catch-icon {
+    padding: 4px 24px;
+    border-radius: 16px;
+    background: base.$color-background-1;
+    border: 2px solid base.$color-border-2;
+    font-size: 1.6rem;
+    color: base.$color-accent-1;
+    box-shadow: base.$shadow;
+    text-shadow: base.$shadow-red;
+    @include base.breakpoint($breakpoint: md) {
+      padding: 8px 32px;
+      font-size: 2rem;
+    }
+  }
+
+  &__illust-app {
+    bottom: -128px;
+    left: 10%;
+    width: 192px;
+    @include base.breakpoint($breakpoint: md) {
+      bottom: -192px;
+      width: 320px;
+    }
+  }
+  &__illust-tree01 {
+    bottom: 24px;
+    left: 35%;
+    width: 256px;
+    @include base.breakpoint($breakpoint: md) {
+      left: 40%;
+      width: 384px;
+    }
+  }
+  &__illust-tree02 {
+    bottom: 48px;
+    left: 75%;
+    width: 128px;
+    filter: blur(1.5px);
+    @include base.breakpoint($breakpoint: md) {
+      left: 80%;
+      width: 256px;
+    }
+  }
+  &__illust-tree03 {
+    display: none;
+    @include base.breakpoint($breakpoint: md) {
+      display: revert;
+      bottom: 64px;
+      left: 67%;
+      width: 160px;
+      filter: blur(2px);
+    }
+  }
+  &__illust-fire {
+    bottom: 12px;
+    left: 70%;
+    width: 64px;
+    @include base.breakpoint($breakpoint: md) {
+      left: 62%;
+      width: 96px;
+    }
+  }
+  &__illust-cloud {
+    top: 48px;
+    right: 65%;
+    width: 96px;
+    filter: blur(1.5px);
+    @include base.breakpoint($breakpoint: md) {
+      width: 160px;
+    }
+  }
+  &__illust-moon {
+    top: 32px;
+    left: 25%;
+    width: 64px;
+    filter: blur(2px);
+    @include base.breakpoint($breakpoint: md) {
+      left: 15%;
+      width: 96px;
+    }
+  }
+}

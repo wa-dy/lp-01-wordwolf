@@ -1,0 +1,81 @@
+@use "./../../foundation/_base.scss";
+
+$duration-cta-fixed: 0.6s;
+
+.p-cta-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    @include base.position-abs($top: 16px, $bottom: auto, $right: 0, $left: auto);
+    width: 96px;
+    aspect-ratio: 1 / 1;
+    filter: drop-shadow(base.$shadow);
+    transition: scale $duration-cta-fixed ease, opacity $duration-cta-fixed ease;
+    pointer-events: auto;
+    @include base.breakpoint($breakpoint: md) {
+      top: 32px;
+      width: 128px;
+    }
+
+    .is-scroll & {
+      scale: 0.8;
+      opacity: 0.9;
+
+      &:hover {
+        scale: 1;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button {
+    @include base.position-abs($top: 0, $bottom: 0, $right: 0, $left: 0);
+    border-radius: 50%;
+    background: base.$color-primary-1;
+    animation: spin 12s linear infinite;
+    // prettier-ignore
+    @keyframes spin {
+      from {rotate: 0deg;}
+      to {rotate: 360deg;}
+    }
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    &::before {
+      content: "";
+      @include base.position-abs($top: 5%, $bottom: 5%, $right: 5%, $left: 5%);
+      border-radius: 50%;
+      background: base.$color-background-1;
+      box-shadow: inset base.$shadow;
+    }
+
+    &::after {
+      content: "";
+      @include base.position-abs($top: 8%, $bottom: 8%, $right: 8%, $left: 8%);
+      border-radius: 50%;
+      background: base.$color-primary-1;
+      box-shadow: base.$shadow;
+    }
+  }
+
+  &__text {
+    @include base.position-abs($top: 50%, $bottom: auto, $right: auto, $left: 50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 2.4rem;
+    color: base.$color-text-4;
+    text-shadow: base.$shadow;
+    @include base.breakpoint($breakpoint: md) {
+      font-size: 2.8rem;
+    }
+  }
+}

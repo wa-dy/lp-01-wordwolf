@@ -1,0 +1,130 @@
+@use "./../../foundation/_base.scss";
+
+$height-toggle: 48px;
+
+.c-mode-selector {
+  @include base.flex($justify: flex-start, $align: center, $direction: column);
+  gap: 16px;
+  padding: 32px 16px;
+  width: 100%;
+  max-width: 712px;
+  border-radius: 12px;
+  background: base.$color-background-2;
+  border-left: 4px solid base.$color-border-blue;
+  @include base.breakpoint($breakpoint: md) {
+    padding: 32px;
+    border-radius: 16px;
+    border-left: 6px solid base.$color-border-blue;
+  }
+
+  &__toggle {
+    @include base.flex($justify: flex-start, $align: center, $direction: row);
+    gap: 24px;
+    position: relative;
+    height: $height-toggle;
+    padding: 0 12px;
+    border-radius: calc($height-toggle / 2);
+    background: base.$color-background-1;
+    border: 2px solid base.$color-border-2;
+  }
+
+  &__label {
+    position: relative;
+    z-index: 1;
+    font-size: 1.6rem;
+    color: base.$color-text-2;
+    cursor: pointer;
+    transition: color base.$duration-flow-mode-change;
+    .is-tamed-mode &--tamed {
+      color: base.$color-text-4;
+      cursor: auto;
+    }
+    .is-wild-mode &--wild {
+      color: base.$color-text-4;
+      cursor: auto;
+    }
+  }
+
+  &__slider {
+    @include base.position-abs($top: 0, $bottom: 0, $right: auto, $left: 0);
+    width: 50%;
+    border-radius: calc($height-toggle / 2);
+    transition: left base.$duration-flow-mode-change;
+    .is-tamed-mode & {
+      left: 0;
+      background: base.$color-primary-1;
+    }
+    .is-wild-mode & {
+      left: 50%;
+      background: base.$color-accent-1;
+    }
+  }
+
+  &__img-text-container {
+    @include base.position-abs($top: auto, $bottom: 44px, $right: -4px, $left: auto);
+    transform: translateX(50%) rotate(5deg);
+    width: 112px;
+    @include base.breakpoint($breakpoint: md) {
+      @include base.position-abs($top: auto, $bottom: 32px, $right: -8px, $left: auto);
+      transform: translateX(100%);
+      width: 192px;
+    }
+  }
+  &__img-text {
+    animation: interval-shake 2s infinite;
+    // prettier-ignore
+    @keyframes interval-shake {
+      0% {transform: translate(0px, 0px) rotateZ(0deg);}
+      2% {transform: translate(2px, 2px) rotateZ(1deg);}
+      4% {transform: translate(0px, 2px) rotateZ(0deg);}
+      6% {transform: translate(2px, 0px) rotateZ(-1deg);}
+      8% {transform: translate(0px, 0px) rotateZ(0deg);}
+      10% {transform: translate(2px, 2px) rotateZ(1deg);}
+      12% {transform: translate(0px, 2px) rotateZ(0deg);}
+      14% {transform: translate(2px, 0px) rotateZ(-1deg);}
+      16% {transform: translate(0px, 0px) rotateZ(0deg);}
+      100% {transform: translate(0px, 0px) rotateZ(0deg);}
+    }
+  }
+
+  &__desc {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid base.$color-border-2;
+  }
+  &__desc-list {
+    @include base.flex($justify: flex-start, $align: stretch, $direction: row);
+    transition: transform base.$duration-flow-mode-change;
+    .is-tamed-mode & {
+      transform: translateX(0);
+    }
+    .is-wild-mode & {
+      transform: translateX(-100%);
+    }
+  }
+  &__desc-item {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 8px;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 12px 16px;
+
+    &--tamed {
+      background: base.$color-primary-2;
+      color: base.$color-primary-1;
+    }
+    &--wild {
+      background: base.$color-accent-2;
+      color: base.$color-accent-1;
+    }
+  }
+  &__desc-title {
+    font-size: 1.6rem;
+    @include base.breakpoint($breakpoint: md) {
+      font-size: 2rem;
+    }
+  }
+  &__desc-text {
+    font-weight: 400;
+  }
+}

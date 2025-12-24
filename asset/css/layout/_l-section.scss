@@ -1,0 +1,10 @@
+@use "./../foundation/_base.scss";
+
+.l-inner {
+  @include base.padding-side($padding: 16px, $padding-md: 32px, $padding-lg: 48px);
+}
+
+.l-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}

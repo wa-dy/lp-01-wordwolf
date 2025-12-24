@@ -1,0 +1,145 @@
+@use "./../../foundation/_base.scss";
+
+.p-flow {
+  &__inner {
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include base.breakpoint($breakpoint: md) {
+      padding-top: 128px;
+      padding-bottom: 128px;
+    }
+  }
+
+  &__bg {
+    @include base.position-abs($top: 0, $bottom: 0, $right: 0, $left: 0);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity base.$duration-flow-mode-change ease;
+    &--tamed {
+      background: linear-gradient(base.$color-background-1 0%, base.$color-primary-2 5%, base.$color-primary-2 95%, base.$color-background-1 100%);
+      .is-tamed-mode & {
+        opacity: 1;
+      }
+    }
+    &--wild {
+      background: linear-gradient(base.$color-background-1 0%, base.$color-accent-2 5%, base.$color-accent-2 95%, base.$color-background-1 100%);
+      .is-wild-mode & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__container {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 64px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 96px;
+    }
+  }
+
+  &__list {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 32px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 48px;
+    }
+    .is-tamed-mode &--wild {
+      display: none;
+    }
+    .is-wild-mode &--tamed {
+      display: none;
+    }
+  }
+
+  &__item {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 24px;
+    max-width: 384px;
+    padding: 32px 20px;
+    border-radius: 32px;
+    background: base.$color-background-1;
+    box-shadow: base.$shadow, base.$shadow-reverse;
+    @include base.breakpoint($breakpoint: md) {
+      max-width: none;
+      box-shadow: base.$shadow-lg, base.$shadow-reverse;
+    }
+  }
+  &__item-content {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 16px;
+    @include base.breakpoint($breakpoint: md) {
+      flex-direction: row;
+
+      &--reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  &__item-content-sub {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 8px;
+    border-radius: 16px;
+    overflow: hidden;
+    .p-flow__list--tamed & {
+      border: 4px solid base.$color-border-blue;
+    }
+    .p-flow__list--wild & {
+      border: 4px solid base.$color-border-red;
+    }
+  }
+  &__item-text,
+  &__item-img {
+    flex: 1;
+  }
+  &__item-text {
+    @include base.flex($justify: flex-start, $align: flex-start, $direction: column);
+    gap: 16px;
+    @include base.breakpoint($breakpoint: md) {
+      padding: 0 16px;
+    }
+  }
+  &__item-text-sub {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 8px;
+    padding: 8px 8px 0;
+  }
+  &__item-img {
+    @include base.breakpoint($breakpoint: md) {
+      width: 50%;
+    }
+  }
+  &__item-step {
+    padding: 0 8px;
+    color: base.$color-text-2;
+    line-height: 1;
+    border-bottom: 4px solid base.$color-border-1;
+    .p-flow__list--tamed & {
+      border-color: base.$color-border-blue;
+    }
+    .p-flow__list--wild & {
+      border-color: base.$color-border-red;
+    }
+  }
+  &__item-step-number {
+    font-size: 4.8rem;
+    font-weight: 400;
+    letter-spacing: -0.24rem;
+    @include base.breakpoint($breakpoint: md) {
+      font-size: 5.6rem;
+      letter-spacing: -0.28rem;
+    }
+  }
+
+  &__mode-title-container {
+    height: 62px;
+    text-align: center;
+    @include base.breakpoint($breakpoint: md) {
+      height: 80px;
+    }
+    @include base.breakpoint($breakpoint: lg) {
+      height: 86px;
+    }
+  }
+}

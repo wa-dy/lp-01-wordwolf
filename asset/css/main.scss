@@ -1,0 +1,33 @@
+//foundation
+@use "foundation/reset";
+@use "foundation/base";
+
+//layout
+@use "layout/l-header";
+@use "layout/l-main";
+@use "layout/l-footer";
+@use "layout/l-section";
+
+//object
+//component
+@use "object/component/c-title";
+@use "object/component/c-text";
+@use "object/component/c-button";
+@use "object/component/c-img";
+@use "object/component/c-mode-selector";
+
+//project
+@use "object/project/p-hero";
+@use "object/project/p-scenes";
+@use "object/project/p-about";
+@use "object/project/p-features";
+@use "object/project/p-flow";
+@use "object/project/p-author";
+
+@use "object/project/p-cta";
+@use "object/project/p-cta-fixed";
+
+//utility
+@use "object/utility/u-display";
+@use "object/utility/u-text";
+@use "object/utility/u-fx";

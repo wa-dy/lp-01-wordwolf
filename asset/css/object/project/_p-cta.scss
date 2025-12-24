@@ -1,0 +1,54 @@
+@use "./../../foundation/_base.scss";
+
+.p-cta {
+  &__inner {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background: linear-gradient(base.$color-background-1 0%, base.$color-background-2 20%, base.$color-background-2 80%, base.$color-background-1 100%);
+    @include base.breakpoint($breakpoint: md) {
+      padding-top: 128px;
+      padding-bottom: 128px;
+    }
+    @include base.breakpoint($breakpoint: lg) {
+      padding-top: 192px;
+      padding-bottom: 192px;
+    }
+  }
+
+  &__container {
+    @include base.flex($justify: flex-start, $align: center, $direction: column);
+    gap: 24px;
+    @include base.breakpoint($breakpoint: md) {
+      gap: 32px;
+    }
+  }
+
+  &__text {
+    position: relative;
+  }
+  &__text-front {
+    position: relative;
+    z-index: 1;
+    text-shadow: base.$shadow-blue;
+  }
+  &__text-back {
+    @include base.position-abs($top: auto, $bottom: -12px, $right: -16px, $left: auto);
+    font-size: 4.8rem;
+    color: base.$color-text-3;
+    text-shadow: base.$shadow-red;
+    opacity: 0;
+    transition: opacity 1s base.$ease-out-quint, filter 2s base.$ease-out-quint;
+    filter: blur(1rem);
+    @include base.breakpoint($breakpoint: md) {
+      font-size: 6.4rem;
+    }
+    @include base.breakpoint($breakpoint: lg) {
+      font-size: 8rem;
+    }
+    .is-active & {
+      opacity: 1;
+      filter: blur(0);
+      transition-delay: 1s;
+    }
+  }
+}

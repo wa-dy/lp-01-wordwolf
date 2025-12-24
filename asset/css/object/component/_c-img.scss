@@ -1,0 +1,27 @@
+@use "./../../foundation/_base.scss";
+
+.c-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-img-float {
+  position: absolute;
+  object-fit: cover;
+  filter: drop-shadow(base.$shadow);
+
+  &--blue {
+    filter: drop-shadow(base.$shadow-blue);
+    @include base.breakpoint($breakpoint: md) {
+      filter: drop-shadow(base.$shadow-blue-lg);
+    }
+  }
+
+  &--red {
+    filter: drop-shadow(base.$shadow-red);
+    @include base.breakpoint($breakpoint: md) {
+      filter: drop-shadow(base.$shadow-red-lg);
+    }
+  }
+}
