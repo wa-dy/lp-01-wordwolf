@@ -348,6 +348,21 @@ ul {
   margin: 0 auto;
 }
 
+.l-loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  background-color: #ffffff;
+  transition: opacity 0.4s;
+}
+.is-loaded .l-loading-screen {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .c-title-main {
   font-family: "Yusei Magic", sans-serif;
   font-size: 3.6rem;

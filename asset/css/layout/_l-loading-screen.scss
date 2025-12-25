@@ -1,0 +1,15 @@
+@use "./../foundation/_base.scss";
+
+.l-loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  background-color: base.$color-background-1;
+  transition: opacity 0.4s;
+
+  .is-loaded & {
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+}

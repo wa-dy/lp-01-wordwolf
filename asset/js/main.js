@@ -2,10 +2,19 @@
 
 {
   const elements = {
-    home: document.querySelector(".js-home"),
+    body: document.querySelector(".js-body"),
     flowSection: document.querySelector(".js-flow"),
     screenTop: document.querySelector(".js-screen-top"),
   };
+
+  // ===========================================
+  //  画面のローディング
+  // ===========================================
+
+  function screenLoading() {
+    elements.body.classList.add("is-loaded");
+  }
+  window.addEventListener("load", screenLoading);
 
   // ===========================================
   //  画面のスクロール状態を監視
@@ -14,7 +23,7 @@
 
   function toggleBodyScrollState() {
     const scrollObserver = new IntersectionObserver(([entry]) => {
-      elements.home.classList.toggle("is-scroll", !entry.isIntersecting);
+      elements.body.classList.toggle("is-scroll", !entry.isIntersecting);
     });
     scrollObserver.observe(elements.screenTop);
   }
@@ -25,7 +34,7 @@
   // ===========================================
 
   function initScrollEffectObserver() {
-    const effectTargets = document.querySelectorAll(".js-fx");
+    const effectTargets = document.querySelectorAll(".js-observe");
     const effectObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -93,7 +102,7 @@
       elements.flowSection.classList.remove("is-tamed-mode");
       elements.flowSection.classList.add("is-wild-mode");
     });
-    
+
     flowSubTitleTamed.addEventListener("click", () => tamedMode.click());
     flowSubTitleWild.addEventListener("click", () => wildMode.click());
   }
