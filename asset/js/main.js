@@ -2,7 +2,7 @@
 
 {
   const elements = {
-    body: document.querySelector(".js-body"),
+    body: document.body,
     flowSection: document.querySelector(".js-flow"),
     screenTop: document.querySelector(".js-screen-top"),
   };

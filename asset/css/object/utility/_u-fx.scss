@@ -7,6 +7,7 @@
   --fadein-y: 8px;
 }
 
+// ボックスエフェクト
 .u-fx-fadein {
   opacity: 0;
   translate: var(--fadein-x) var(--fadein-y);
@@ -16,7 +17,6 @@
     translate: 0 0;
   }
 }
-
 .u-fx-blur {
   opacity: 0;
   filter: blur(1rem);
@@ -27,7 +27,6 @@
     transition-delay: var(--delay);
   }
 }
-
 .u-fx-zoomup {
   transform: scale(0);
   &.is-active {
@@ -51,7 +50,6 @@
     }
   }
 }
-
 .u-fx-rotate {
   opacity: 0;
   transform: rotate(0deg);
@@ -62,16 +60,18 @@
   }
 }
 
+// テキストエフェクト
 .u-split-letter {
   display: inline-block;
-
-  .u-fx-fadein-text & {
+}
+.u-fx-fadein-text {
+  & .u-split-letter {
     opacity: 0;
     translate: var(--fadein-x) var(--fadein-y);
     transition: translate 1.4s base.$ease-out-back, opacity 1s base.$ease-out-expo;
     transition-delay: calc(var(--index) * 0.03s);
   }
-  .u-fx-fadein-text.is-active & {
+  &.is-active .u-split-letter {
     opacity: 1;
     translate: 0 0;
   }
